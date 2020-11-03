@@ -1,0 +1,248 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная', 'Проекты')
+                    article.article
+                        .box
+                            .top
+                                h1.top__title.title СХП «Авангард» — миксера и насосы для лагун
+                            .layout.layout_text.mb-large
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__subtitle Задача
+                                .layout__base
+                                    .content
+                                        p
+                                            | <strong>Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления. От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования.</strong>
+                                        p Если контроль действий монтажников производится изготовителем системы, это позволяет «на ходу» корректировать работу и устранять некоторые возможные ошибки. Приведем несколько примеров проблем, с которыми может столкнуться персонал, монтирующий вентиляционную систему.
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__subtitle Решение
+                                .layout__base
+                                    .content
+                                        p Замеры помещения и толщины перекрытий, проведенные при разработке проекта, могут оказаться неточными — особенно часто это встречается при проектировании параллельно с ремонтом или строительством здания. В этом случае может понадобиться нарастить или укоротить воздуховоды, установить не предусмотренные проектом элементы — а это может повлечь необходимость изменения некоторых параметров работы оборудования.
+                                        .slider.slider_simple.mb-mid
+                                            .slider__box.slider__box_content
+                                                - var number = 1;
+                                                - var items = [ {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)', placeholder: 'placeholder'} ];
+                                                each item in items
+                                                    -var count = number
+                                                    .slider__item
+                                                        if item.placeholder
+                                                            img.slider__img(src="../assets/index/images/markup/slider_sm_" + count + ".jpg" alt="")
+                                                            //img.slider__img(src="holder.js/984x606?theme=topic&auto=true" alt="")
+                                                        else
+                                                            img.slider__img(src="../assets/index/images/markup/slider_sm_" + count + ".jpg" alt="")
+                                                        .slider__title=item.title
+                                            .slider__box.slider__box_nav
+                                                - var numberTh = 1;
+                                                each item in items
+                                                    -var countTh = numberTh
+                                                    .slider__thumb
+                                                        if item.placeholder
+                                                            //img.slider__img(src="holder.js/167x103?theme=topic&auto=true" alt="")
+                                                            img.slider__img(src="../assets/index/images/markup/slider_sm_thumb_" + countTh + ".jpg" alt="")
+                                                        else
+                                                            img.slider__img(src="../assets/index/images/markup/slider_sm_thumb_" + countTh + ".jpg" alt="")
+
+                                        p В этом случае может понадобиться нарастить или укоротить воздуховоды, установить не предусмотренные проектом элементы — а это может повлечь необходимость изменения некоторых параметров работы оборудования.
+                                        p Представители корпорации обладают всеми необходимыми компетенциями для проведения профессионального контроля монтажа и пусконаладки вентиляционной системы любой сложности — будь то вентиляция небольшого кафе или масштабная система подачи и вывода воздуха огромного производственного цеха. Наши услуги сэкономят ваше время и средства предприятия!
+
+                            .card.mb-large
+                                .card__side
+                                    .card__person
+                                        figure.card__figure
+                                            img.card__img(src="../assets/index/images/markup/card_1.jpg" alt="")
+                                            //img.card__img(src="holder.js/100x100?theme=topic&auto=true" alt="")
+                                        .card__box
+                                            .card__title Константин Забнин
+                                            .card__info Начальник отдела комплектации,снабжения и закупок
+                                            .card__city г. Москва
+                                .card__base
+                                    .content
+                                        p
+                                            | <em>Компания «РАМПОРТ АРГО» выражает вам свою благодарность и признательность за качественную 	и своевременную поставку вентиляционного оборудования, за внимательный подход к поставленной задаче.</em>
+                                        p
+                                            | <em>Также хотим выразить личную благодарность начальнику отдела по работе с ключевыми клиентами Валерию Заворотному за профессионализм, терпение и умение в кратчайшие сроки решать вопросы. Компания «РАМПОРТ АРГО» выражает вам свою благодарность и признательность за качественную и своевременную поставку вентиляционного оборудования, за внимательный подход к поставленной задаче. Также хотим выразить личную благодарность начальнику отдела по работе с ключевыми клиентами Валерию Заворотному за профессионализм, терпение и умение в кратчайшие сроки решать вопросы.</em>
+                    .box
+                        h2.heading.text-center Использованное оборудование
+                        .slider.slider_line.mb-big
+                            .slider__box
+                                +product('slider', {
+                                    title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                    imgSize: '200x100',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    notexist: 'Запросить цену',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см',
+                                    price: '5 250',
+                                    delivery: 'Доставка на 8 ноября',
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    notexist: 'Запросить цену',
+                                    delivery: 'Доставка на 8 ноября',
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                })
+                    .section.section_dark
+                        .box
+                            .section__caption.mb-big.text-center
+                                h2.heading Заказать услугу
+                                .section__desc В течение 15 минут наш менеджер свяжется с Вами для обсуждения вашего вопроса
+                            form.form
+                                .flex.flex_form
+                                    .flex__cell
+                                        .form__title Контактные данные
+                                        .form__row
+                                            label.form__label Название организации
+                                            .form__control
+                                                input.form__input(type="text")
+                                        .form__row
+                                            label.form__label Контактное лицо
+                                            .form__control
+                                                input.form__input(type="text")
+                                        .form__row.form__required
+                                            label.form__label Электронная почта (обязательно)
+                                            .form__control
+                                                input.form__input(type="email")
+                                                .form__error-message Необходимо указать адрес электронной почты
+                                        .form__row.form__required
+                                            label.form__label Номер телефона (обязательно)
+                                            .form__control
+                                                input.form__input(type="tel")
+                                                .form__error-message Необходимо ввести телефон
+                                    .flex__cell
+                                        .form__title Услуги
+                                        .form__row.mb-mid
+                                            .form__control
+                                                +checkbox('flex', 'services', {
+                                                    title: 'Инженерная служба'
+                                                },{
+                                                    title: 'Сервисная служба'
+                                                },{
+                                                    title: 'Проектный отдел'
+                                                },{
+                                                    title: 'Комплексное решение'
+                                                },{
+                                                    title: 'Готовые проекты'
+                                                })
+                                        .form__title Дополнительная информация
+                                        .form__row
+                                            .form__control
+                                                textarea.form__textarea(rows="7")
+                                .cover
+                                    .cover__base
+                                        +file('файл-1.jpg','файл-2.jpg')
+                                    .cover__side
+                                        button(type="submit").btn.btn_type_bright Отправить заявку
+
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

@@ -1,0 +1,123 @@
+.checkbox {
+	&__item {
+		margin-bottom: 8px;
+
+		&_hidden {
+			display: none;
+		}
+	}
+	&__label {
+		display: inline-block;
+		vertical-align: top;
+		box-sizing: border-box;
+		font-size: 16px;
+		line-height: 1.3;
+		cursor: pointer;
+		position: relative;
+		padding: 3px 10px 0 38px;
+		min-height: 25px;
+		color: @blue;
+
+		&:before {
+			content: "";
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;
+			border-radius: 2px;
+			border: 1px solid @formBorderColor;
+			background-color: #fff;
+			box-shadow: 0 2px 3px 0 rgba(168, 168, 168, 0.43);
+			transition: border-color @linkTransition ease;
+		}
+		&:after {
+			content: "";
+			box-sizing: border-box;
+			position: absolute;
+			opacity: 0;
+			top: 1px;
+			left: 1px;
+			width: 23px;
+			height: 23px;
+			background-repeat: no-repeat;
+			background-image: url("@{imagesPathSvg}/icon_checkbox.svg");
+		}
+		&:hover:before {
+			border-color: #c2c2c2;
+		}
+	}
+	&__input {
+		display: none;
+
+		&:checked + .checkbox__label {
+			&:after {
+				opacity: 1;
+			}
+			&:before {
+				border-color: @green;
+			}
+		}
+		&[disabled="disabled"] + .checkbox__label {
+			cursor: default;
+			opacity: 0.5;
+
+			&:before {
+				border-color: #ddd;
+			}
+		}
+	}
+	&__counter {
+		color: @textGrey;
+		margin-left: 9px;
+	}
+
+	&_flex {
+		column-count: 2;
+		column-gap: 35;
+
+		.checkbox__item {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 1099px) {
+		&_filter {
+			column-count: 3;
+			column-gap: 35;
+		}
+		&_flex {
+			column-count: 2;
+			column-gap: 35;
+		}
+	}
+	@media screen and (max-width: 1024px) {
+		&_flex {
+			column-count: auto;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		&_filter {
+			column-count: 2;
+			column-gap: 40;
+		}
+		&_flex {
+			column-count: 2;
+		}
+	}
+	@media screen and (max-width: 540px) {
+		&_filter {
+			column-count: auto;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		&_filter {
+			column-count: auto;
+		}
+		&_flex {
+			column-count: auto;
+		}
+	}
+}

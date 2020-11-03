@@ -1,0 +1,9 @@
+mixin select(mod,def,...items)
+    .select.js-expand(class="select" + mod)
+        a.select__default(href="#").js-expand__btn
+            span.select__def=def
+        ul.select__list.js-expand__content
+            each item in items
+                li.select__item
+                    a.select__link(href="#")
+                        span.select__text=item

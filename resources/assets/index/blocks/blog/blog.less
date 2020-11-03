@@ -1,0 +1,146 @@
+.blog {
+	&__container {
+		display: block;
+		text-decoration: none;
+		color: @textColor;
+		position: relative;
+
+		&:hover {
+			.blog {
+				&__text {
+					color: @linkColorHover;
+					border-color: @linkBorderColorHover;
+				}
+			}
+		}
+	}
+	&__figure {
+		position: relative;
+	}
+	&__img {
+		max-width: 100%;
+	}
+	&__caption {
+		font-size: 32px;
+
+		color: #71d130;
+	}
+	&__period {
+		margin-top: 6px;
+
+		color: @textGrey;
+		font-size: 16px;
+	}
+	&__date {
+		color: @textGrey;
+		font-size: 16px;
+	}
+	&__title {
+		margin-top: 13px;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	&__text {
+		font-weight: normal;
+		color: @linkColor;
+		border-bottom: 1px solid transparent;
+	}
+	&__desc {
+		margin-top: 11px;
+		font-size: 18px;
+		line-height: 24px;
+
+		color: @textColor;
+	}
+	@media screen and (max-width: 1099px) {
+		&__title {
+			margin-top: 10px;
+		}
+	}
+
+	&_main {
+		.blog {
+			&__container {
+				&:hover {
+					.blog {
+						&__text {
+							color: #fff;
+							border-color: #fff;
+						}
+					}
+				}
+			}
+			&__info {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				padding: 25px 28px;
+			}
+			&__figure {
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					opacity: 1;
+					background: linear-gradient(to bottom, rgba(125,185,232,0) 25%,rgba(0,112,190,1) 85%);
+					//transition: opacity @bgTransition ease;
+				}
+			}
+			&__text {
+				color: #fff;
+			}
+		}
+	}
+	&_border {
+		.blog {
+			&__container {
+				border: 1px solid #dcdcdc;
+				padding: 28px 28px 21px;
+			}
+
+			@media screen and (max-width: 1099px) {
+				&__container {
+					padding: 19px 17px;
+				}
+			}
+		}
+	}
+	&_card {
+		.blog {
+			&__figure {
+				margin-bottom: 26px;
+			}
+			@media screen and (max-width: 1099px) {
+				&__figure {
+					margin-bottom: 22px;
+				}
+			}
+		}
+	}
+	&_sale {
+		.blog {
+			&__container {
+				border: 2px solid @green;
+			}
+			&__info {
+				padding: 25px 28px;
+			}
+			&__figure {
+				padding-top: 30px;
+			}
+			&__title {
+				margin-top: 35px;
+			}
+			@media screen and (max-width: 1099px) {
+				&__info {
+					padding: 19px 17px;
+				}
+			}
+		}
+	}
+}

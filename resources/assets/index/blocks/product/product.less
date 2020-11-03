@@ -1,0 +1,154 @@
+@prodPadding: 25px;
+.product {
+	height: 100%;
+	border: 1px solid @borderColor;
+	background-color: #fff;
+	transition: box-shadow @bgTransition ease;
+
+	&:hover {
+		box-shadow: 0 17px 46px 0 rgba(174, 174, 174, 0.41);
+
+		.product {
+
+		}
+	}
+
+	&__box {
+		text-align: center;
+		padding-bottom: 25px;
+	}
+	&__figure {
+		box-sizing: border-box;
+		display: block;
+		text-decoration: none;
+		padding: @prodPadding @prodPadding 20px;
+
+		&:hover {
+			+ .product__title {
+				.product__link {
+					color: @linkColorHover;
+					border-bottom-color: @linkBorderColorHover;
+				}
+			}
+		}
+	}
+	&__pic {
+		height: 150px;
+		position: relative;
+	}
+	&__img {
+		max-width: 100%;
+		max-height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+
+		&_cssfilter {
+			filter: grayscale(100%);
+			opacity: .3;
+		}
+	}
+	&__title {
+		display: block;
+		text-decoration: none;
+		font-size: 18px;
+		line-height: 1.25;
+		padding: 0 @prodPadding;
+		height: 70px;
+		overflow: hidden;
+		margin-bottom: 22px;
+
+		&:hover {
+			.product {
+				&__link {
+					color: @linkColorHover;
+					border-bottom-color: @linkBorderColorHover;
+				}
+			}
+		}
+	}
+	&__link {
+		word-wrap: break-word;
+		color: @textColor;
+		border-bottom: 1px solid #b1b1b1;
+	}
+	&__container {
+
+	}
+	&__categories {
+		padding: 0 @prodPadding;
+		margin-top: 16px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__unit {
+		margin-right: 19px;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+	&__item {
+		display: block;
+		word-wrap: break-word;
+	}
+	&__info {
+		padding: 0 @prodPadding;
+		display: block;
+		margin-top: 7px;
+		text-decoration: none;
+	}
+	&__code {
+		font-size: 16px;
+		line-height: 1.2;
+		color: @textGrey;
+		word-wrap: break-word;
+	}
+	&__desc {
+		margin-top: 15px;
+		font-size: 16px;
+		line-height: 1.2;
+		color: @textColor;
+		word-wrap: break-word;
+		height: 39px;
+		overflow: hidden;
+		text-align: center;
+	}
+	&__actions {
+		margin-top: 17px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 14px;
+		padding-right: 14px;
+		min-height: 40px;
+
+		&_request {
+			justify-content: center;
+		}
+	}
+	&__price {
+		font-weight: bold;
+		font-size: 24px;
+		color: @textColor;
+		min-width: 96px;
+	}
+	&__btn {
+		margin-left: 14px;
+	}
+	&__bottom {
+		margin-top: 18px;
+		padding: 0 @prodPadding;
+		min-height: 36px;
+	}
+	&__mark {
+		font-size: 13px;
+		line-height: 1.2;
+		color: @textColor;
+		margin-top: 5px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

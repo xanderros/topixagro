@@ -1,0 +1,101 @@
+mixin product(slider,...items)
+        - var number = 1;
+        each item in items
+            -var count = number++
+            div(class=slider ? 'slider__item' : 'grid__cell')
+                .product
+                    .product__box
+                        .product__top
+                            a.product__figure(href="#")
+                                .product__pic
+                                    img.product__img(src="../assets/index/images/markup/product_" + count + ".jpg" alt="")
+                                    //img.product__img(src="holder.js/" + item.imgSize + "?theme=topic&auto=true" alt="")
+                            a.product__title.js-dotdotdot(href="#")
+                                span.product__link=item.title
+                            .product__container
+                                ul.product__categories
+                                    li.product__unit
+                                        a.product__item.link-dark(href="#")
+                                            span.link-dark__text=item.category1
+                                    li.product__unit
+                                        a.product__item.link-dark(href="#")
+                                            span.link-dark__text=item.category2
+                                a.product__info(href="#")
+                                    .product__code=item.code
+                                    .product__desc=item.desc
+                        .product__footer
+                            .product__actions(class=item.notexist ? 'product__actions_request' : '')
+                                if item.notexist
+                                    a.product__item.link-dark(href="#")
+                                        span.link-dark__text=item.notexist
+                                else
+                                    .product__price=item.price
+                                        span.product__icon.icon.icon_ruble
+                                            svg.icon__item
+                                                use(xlink:href="#icon_ruble")
+                                    .product__btn
+                                        button.cart-btn(type="submit")
+                                            span.cart-btn__field 1
+                                                span.cart-btn__count шт
+                                            span.cart-btn__icon.icon.icon_19
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_19")
+                            .product__bottom
+                                .product__marks
+                                    .product__mark=item.delivery
+                                    .product__mark=item.exist
+                    if item.parts
+                        .product__details
+                            .details
+                                .details__row.details__row_heading
+                                    .details__cell.details__cell_title Запасные детали
+                                    .details__cell.details__cell_code Артикул
+                                    .details__cell.details__cell_price Цена
+                                .details__row
+                                    .details__cell.details__cell_title Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                    .details__cell.details__cell_code
+                                        span.details__code Артикул:
+                                        | H50515010
+                                    .details__cell.details__cell_price
+                                        a.details__link.link-dark(href="#")
+                                            span.link-dark__text Запросить цену
+                                .details__row
+                                    .details__cell.details__cell_title Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                    .details__cell.details__cell_code
+                                        span.details__code Артикул:
+                                        | H50515010
+                                    .details__cell.details__cell_price
+                                        .details__price 62 500
+                                            span.details__icon.icon.icon_ruble
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_ruble")
+                                        .details__btn
+                                            button.cart-btn(type="submit")
+                                                span.cart-btn__field 1
+                                                    span.cart-btn__count шт
+                                                span.cart-btn__icon.icon.icon_19
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_19")
+                                .details__hidden
+                                    .details__row
+                                        .details__cell.details__cell_title Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                        .details__cell.details__cell_code
+                                            span.details__code Артикул:
+                                                | H50515010
+                                        .details__cell.details__cell_price
+                                            .details__price 62 500
+                                                span.details__icon.icon.icon_ruble
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_ruble")
+                                            .details__btn
+                                                button.cart-btn(type="submit")
+                                                    span.cart-btn__field 1
+                                                        span.cart-btn__count шт
+                                                    span.cart-btn__icon.icon.icon_19
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_19")
+                                .details__bottom
+                                    a.details__more.js-details(href="#")
+                                        span.details__text.details__text_collapsed Все запчасти
+                                        span.details__text.details__text_expanded Свернуть
+

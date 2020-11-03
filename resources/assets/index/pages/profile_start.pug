@@ -1,0 +1,71 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Личный кабинет')
+                        .top
+                            h1.top__title.title Профиль
+                        .layout.layout_profile
+                            .layout__side
+                                .submenu.submenu_side.js-sub
+                                    .submenu__default
+                                        a.submenu__all.js-sub__btn(href="#") Профиль
+                                    ul.submenu__list.js-sub__content
+                                        li.submenu__item.submenu__item_active
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_profile
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_profile")
+                                                span.submenu__text Профиль
+                                        li.submenu__item
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_orders
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_orders")
+                                                span.submenu__text Заказы
+                                        li.submenu__item.submenu__item_last
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_exit
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_exit")
+                                                span.submenu__text Выход
+                                .aside.aside_desktop
+                                    a.aside__link(href="#")
+                                        img.aside__img(src="../assets/index/images/markup/aside_1.jpg" alt="")
+                            .layout__base
+                                .bordered.mb-large
+                                    .profile
+                                        .profile__person
+                                            figure.profile__figure
+                                                //img.profile__img(src="../assets/index/images/markup/card_1.jpg" alt="")
+                                                span.profile__icon.icon.icon_profile
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_20")
+                                            .profile__base
+                                                .profile__title Здравствуйте,
+                                                .profile__name Алексей Александрович
+                                        .profile__message.message.message_success.message_show
+                                            span.message__icon.icon.icon_checkbox
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_checkbox")
+                                            .message__base
+                                                .message__title Спасибо за регистрацию!
+                                                .message__text Ваш профиль находится на модерации. Мы активируем профиль в течение трех рабочих дней
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

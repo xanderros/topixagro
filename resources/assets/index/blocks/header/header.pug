@@ -1,0 +1,69 @@
+mixin header
+    header.header
+        .header__top
+            .header__box.box
+                .header__logo
+                    a.logo.logo_header(href="#")
+                .header__title Оборудование для животноводства и птицеводства
+                .header__base
+                    .header__phone
+                        .phone.js-expand
+                            .phone__box
+                                a.phone__default(href="#").js-expand__btn
+                                    .phone__title.phone__title_main
+                                        span.phone__icon.icon.icon_17
+                                            svg.icon__item
+                                                use(xlink:href="#icon_17")
+                                        | Горячая линия
+                                    .phone__def 8 800 111 21 21
+                                .phone__container.js-expand__content
+                                    ul.phone__list
+                                        li.phone__item
+                                            .phone__title Горячая линия
+                                            a.phone__link(href="tel:+88001112121") 8 800 111 21 21
+                                        li.phone__item
+                                            .phone__title Минск
+                                            a.phone__link(href="tel:+74959256564") +7 (495) 925-65-64
+                                        li.phone__item
+                                            .phone__title Москва
+                                            a.phone__link(href="tel:+79203253235") +7 (920) 325-32-35
+                                    .phone__btn
+                                        a.btn.btn_type_flat(href="#") Обратный звонок
+
+                    .header__search
+                        form.search.search_top.form.js-search
+                            input.form__input.form__input_search(type="text" placeholder="Что найти?")
+
+                    .header__lang
+                        +select('_lang','Русский','Русский','Английский')
+
+        .header__nav
+            .box
+                .header__box
+                    +nav
+                    .drop
+                        a.drop__btn.js-search__mob(href="#")
+                            span.drop__icon.icon.icon_28
+                                svg.icon__item
+                                    use(xlink:href="#icon_28")
+                        .drop__content
+                            form.search.search_nav.form.js-search
+                                input.form__input.form__input_search(type="text" placeholder="Что найти?")
+                    .header__aside
+                        a.auth(href="#")
+                            span.auth__icon.icon.icon_20
+                                svg.icon__item
+                                    use(xlink:href="#icon_20")
+                            span.auth__title Войти
+                        a.cart(href="#")
+                            .cart__side
+                                span.cart__icon.icon.icon_cart
+                                    svg.icon__item
+                                        use(xlink:href="#icon_cart")
+                                .cart__count 9
+                            .cart__base
+                                .cart__text товара на
+                                .cart__price 12 420
+                                    span.cart__unit.icon.icon_ruble
+                                        svg.icon__item
+                                            use(xlink:href="#icon_ruble")

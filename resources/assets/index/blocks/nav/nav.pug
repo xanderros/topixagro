@@ -1,0 +1,68 @@
+mixin nav
+    - var navText = [{text:'Каталог', cat: 'cat',  size: 'wide', active: 'active', inner: [{text: 'Вентиляция'}, {text: 'Доильное оборудование'}, {text: 'Клеточное оборудование'}, {text: 'Комплектации'}, {text: 'Кормление'}, {text: 'Лабораторное оборудование', active: 'active', submenu: [{text: 'Системы увлажнения — охлаждения высокого давления', count: '32'}, {text: 'Системы увлажнения', count: '17'}, {text: 'Кормораздача', count: '11'}, {text: 'Поилки', count: '32'}, {text: 'Навозоудаление', count: '234'}, {text: 'Поилки', count: '19'}, {text: 'Птица', count: '8'}, {text: 'Навозоудаление', count: '85'}, {text: 'Кормораздача', count: '42'}]}, {text: 'Метизы, крепеж, трос, лебедки'}, {text: 'Моющие и дезинфицирующие средства'}, {text: 'Навозоудаление'}, {text: 'Освещение'}, {text: 'Отопление'}, {text: 'Охлаждение'}, {text: 'Перчатки, бахилы, накидки, фартуки'}, {text: 'Поение'}, {text: 'Санитария'}, {text: 'Содержание'}, {text: 'Техника'}, {text: 'Уход за КРС'}, {text: 'Яйцесбор'}]}, {text:'Услуги'}, {text:'Отзывы'}, {text:'Проекты'}, {text:'Галерея'}, {text:'Информация', size: 'narrow', inner: [{text: 'О компании'}, {text: 'Доставка и оплата'}, {text: 'Партнерство'}, {text: 'Блог'}]}, {text:'Контакты'}];
+    nav.nav
+        .nav__menu
+            a.nav__link.nav__link_menu(href="#")
+                span.nav__btn.nav__btn_menu.nav-btn(href="#")
+                    span.nav-btn__item
+                | Меню
+        .nav__wrapper
+            ul.nav__list
+                each list in navText
+                    if list.inner
+                        li.nav__item.nav__item_dropdown(class=list.cat ? 'nav__item_cat' : '' class=list.active ? 'nav__item_active' : '' class='nav__item_size_' + list.size)
+                            if list.cat
+                                a.nav__link(href="#")
+                                    span.nav__btn.nav__btn_cat.nav-btn(href="#")
+                                        span.nav-btn__item
+                                    = list.text
+
+                            else
+                                a.nav__link(href="#")= list.text
+                            .nav__dropdown
+                                ul.nav__inner
+                                    each innerItem in list.inner
+                                        if innerItem.submenu
+                                            li.nav__inner-item.nav__inner-item_dropdown(class=innerItem.active ? 'nav__inner-item_active' : '')
+                                                .nav__side
+                                                    .nav__back
+                                                        a.back-btn(href="#")
+                                                            span.back-btn__icon.icon.icon_arrow-left
+                                                                svg.icon__item
+                                                                    use(xlink:href="#icon_arrow-left")
+                                                            .back-btn__text Назад
+                                                    a.nav__inner-link(href="#")= innerItem.text
+                                                    .nav__bar
+                                                        ul.nav__submenu
+                                                            each submenuItem in innerItem.submenu
+                                                                li.nav__submenu-item
+                                                                    a.nav__submenu-link(href="#")= submenuItem.text
+                                                                        span.nav__count= submenuItem.count
+                                                .nav__base
+                                                    .grid.grid_nav
+                                                        +product('', {
+                                                            title: 'Газовый воздухонагреватель ERMAF P120',
+                                                            imgSize: '240x150',
+                                                            category1: 'Навозоудаление',
+                                                            category2: 'Топик Агро',
+                                                            code: 'Артикул: H50515010',
+                                                            desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                                            price: '68 188',
+                                                            delivery: 'Доставка на 8 ноября',
+                                                            exist: 'На складе достаточно'
+                                                        },{
+                                                            title: 'Воздухонагреватель ERMAF P120',
+                                                            imgSize: '240x150',
+                                                            category1: 'Навозоудаление',
+                                                            category2: 'Топик Агро',
+                                                            code: 'Артикул: H50515010',
+                                                            desc: '17 см × 20 см',
+                                                            price: '5 250',
+                                                            delivery: 'Доставка на 8 ноября'
+                                                        })
+                                        else
+                                            li.nav__inner-item(class=innerItem.active ? 'nav__inner-item_active' : '')
+                                                a.nav__inner-link(href="#")= innerItem.text
+                    else
+                        li.nav__item(class=list.active ? 'nav__item_active' : '')
+                            a.nav__link(href="#")= list.text

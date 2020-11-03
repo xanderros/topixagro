@@ -1,0 +1,26 @@
+mixin tags(def,...items)
+    .tags.js-sub
+        .tags__default
+            a.tags__all.js-sub__btn(href="#")=def
+        ul.tags__list.js-sub__content
+            each item in items
+                if item.main
+                    li.tags__item.tags__item_main
+                        a.tags__link(href="#")
+                            span.tags__text=item.main
+                            span.tags__count=item.count
+                else
+                    li.tags__item(class=item.submenu ? 'tags__item_submenu' : '')
+                        div.tags__caption
+                            a.tags__link(href="#")
+                                span.tags__text=item.title
+                                span.tags__count=item.count
+                            if item.submenu
+                                a.tags__arrow(href="#")
+                        if item.submenu
+                            ul.tags__submenu
+                                each subItem in item.submenu
+                                    li.tags__subitem
+                                        a.tags__sublink(href="#")
+                                            span.tags__text=subItem.title
+                                            span.tags__count=subItem.count

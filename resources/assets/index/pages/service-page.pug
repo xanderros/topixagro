@@ -1,0 +1,177 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                    article.article
+                        .box
+                            .top
+                                h1.top__title.title Проектирование животноводческих комплексов
+                            .layout.layout_text.mb-large
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Описание услуги
+                                .layout__base
+                                    .content.mb-large
+                                        p Консультации проводят как наши специалисты, так и специалисты ведущих научных центров России. Результатом консультации, является четкий ответ на поставленный вопрос и обоснованные варианты решения поставленных задач. Форма проведения консультаций может быть как очной, так и заочной в т.ч. в онлайн режиме.
+                                        p Зачастую, понятие технической консультации следует рассматривать в более широком смысле. Такая консультация может содержать не только ответы на поставленные вопросы и рекомендации, но и методологии расчетов, дополнительные инженерные сведения и подобную информацию. Для получения консультации, вначале следует четко сформулировать вопрос и подробно описать стоящею перед Вами задачу
+                                    .docs
+                                        .docs__cell
+                                            h3.subtitle Документы и прайс
+                                            ul.layout__list.list.list_content
+                                                li.list__item
+                                                    a.list__link(href="#") Скачать договор
+                                                    span.list__mark (19 Mb, pdf)
+                                                li.list__item
+                                                    a.list__link(href="#") Скачать прайс-лист
+                                                    span.list__mark (37 Mb, pdf)
+                                            .row
+                                                a.btn.btn_type_bright(href="#") Подобрать оборудование
+
+                                        .docs__cell
+                                            h3.subtitle Сертификаты и гарантия
+                                            .flex.flex_sert
+                                                .flex__cell
+                                                    a.item(href="#")
+                                                        .item__figure
+                                                            img.item__img(src="../assets/index/images/markup/item_1.jpg" alt="")
+                                                        .item__wrap
+                                                            .item__desc
+                                                                span.item__text Сертификат соответствия ГОСТ 20295-85
+                                                .flex__cell
+                                                    a.item(href="#")
+                                                        .item__figure
+                                                            img.item__img(src="../assets/index/images/markup/item_1.jpg" alt="")
+                                                        .item__wrap
+                                                            .item__desc
+                                                                span.item__text Декларация о соответствии таможенного союза
+                        .advantages.mb-xlarge
+                            .advantages__box.box
+                                .advantages__side
+                                    h2.advantages__title Наши преимущества
+                                .advantages__base
+                                    .advantages__grid
+                                        ul.advantages__list
+                                            li.advantages__item Дробеструйная обработка металла
+                                            li.advantages__item Раскрой листового металла на машинах газовой и плазменной резки
+                                            li.advantages__item Изготовление электросварной балки
+                                            li.advantages__item Раскрой проката
+                                            li.advantages__item Изготовление комплектующих
+                                            li.advantages__item Сборка и сварка металлоконструкций
+                                            li.advantages__item Дробеструйная обработка готовых изделий (II ступень)
+                                            li.advantages__item Покраска
+                        .box
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Современное оборудование
+                                        .layout__desc Высокий уровень оснащенности современным высокоточным технологическим оборудованием.
+                                .layout__base
+                                    .slider.slider_simple
+                                        .slider__box.slider__box_content
+                                            - var number = 1;
+                                            - var items = [ {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)', placeholder: 'placeholder'} ];
+                                            each item in items
+                                                -var count = number
+                                                .slider__item
+                                                    if item.placeholder
+                                                        img.slider__img(src="holder.js/984x606?theme=topic&auto=true" alt="")
+                                                    else
+                                                        img.slider__img(src="../assets/index/images/markup/slider_sm_" + count + ".jpg" alt="")
+                                                    .slider__title=item.title
+                                        .slider__box.slider__box_nav
+                                            - var numberTh = 1;
+                                            each item in items
+                                                -var countTh = numberTh
+                                                .slider__thumb
+                                                    if item.placeholder
+                                                        img.slider__img(src="../assets/index/images/markup/slider_sm_thumb_" + countTh + ".jpg" alt="")
+                                                        //img.slider__img(src="holder.js/167x103?theme=topic&auto=true" alt="")
+                                                    else
+                                                        img.slider__img(src="../assets/index/images/markup/slider_sm_thumb_" + countTh + ".jpg" alt="")
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Зачем нужен шеф-монтаж?
+                                .layout__base
+                                    .content
+                                        p Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления. От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования. Если контроль действий монтажников производится изготовителем системы, это позволяет «на ходу» корректировать работу и устранять некоторые возможные ошибки. Приведем несколько примеров проблем, с которыми может столкнуться персонал, монтирующий вентиляционную систему.
+                                        ol
+                                            li Замеры помещения и толщины перекрытий, проведенные при разработке проекта, могут оказаться неточными — особенно часто это встречается при проектировании параллельно с ремонтом или строительством здания. В этом случае может понадобиться нарастить или укоротить воздуховоды, установить не предусмотренные проектом элементы — а это может повлечь необходимость изменения некоторых параметров работы оборудования.
+                                            li Заказчик не согласен на пробивку стен в предусмотренных проектом местах — воздуховоды приходится прокладывать по-другому.
+                                            li Отдельные агрегаты в системе дают сбой и нужно оперативно определить его причину.
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Кто проводит шеф-монтаж?
+                                .layout__base
+                                    .content
+                                        p Именно специалисты, представляющие производителя оборудования, в состоянии максимально быстро решить возникающие проблемы и не сорвать при этом сроки монтажа. Их участие в работе монтажников значительно снижает процент возможных ошибок и неполадок, которые могут проявить себя уже после окончательного запуска системы вентиляции. Шеф-монтаж — гарантия безаварийного функционирования всего комплекса оборудования, повышения его надежности и срока службы.
+                                        p Представители корпорации обладают всеми необходимыми компетенциями для проведения профессионального контроля монтажа и пусконаладки вентиляционной системы любой сложности — будь то вентиляция небольшого кафе или масштабная система подачи и вывода воздуха огромного производственного цеха. Наши услуги сэкономят ваше время и средства предприятия!
+                    .section.section_dark
+                        .box
+                            .section__caption.mb-big.text-center
+                                h2.heading Заказать услугу
+                                .section__desc В течение 15 минут наш менеджер свяжется с Вами для обсуждения вашего вопроса
+                            form.form
+                                .flex.flex_form
+                                    .flex__cell
+                                        .form__title Контактные данные
+                                        .form__row
+                                            label.form__label Название организации
+                                            .form__control
+                                                input.form__input(type="text")
+                                        .form__row
+                                            label.form__label Контактное лицо
+                                            .form__control
+                                                input.form__input(type="text")
+                                        .form__row.form__required
+                                            label.form__label Электронная почта (обязательно)
+                                            .form__control
+                                                input.form__input(type="email")
+                                                .form__error-message Необходимо указать адрес электронной почты
+                                        .form__row.form__required
+                                            label.form__label Номер телефона (обязательно)
+                                            .form__control
+                                                input.form__input(type="tel")
+                                                .form__error-message Необходимо ввести телефон
+                                    .flex__cell
+                                        .form__title Услуги
+                                        .form__row.mb-mid
+                                            .form__control
+                                                +checkbox('flex', 'services', {
+                                                    title: 'Инженерная служба'
+                                                },{
+                                                    title: 'Сервисная служба'
+                                                },{
+                                                    title: 'Проектный отдел'
+                                                },{
+                                                    title: 'Комплексное решение'
+                                                },{
+                                                    title: 'Готовые проекты'
+                                                })
+                                        .form__title Дополнительная информация
+                                        .form__row
+                                            .form__control
+                                                textarea.form__textarea(rows="7")
+                                .cover
+                                    .cover__base
+                                        +file('файл-1.jpg','файл-2.jpg')
+                                    .cover__side
+                                        button(type="submit").btn.btn_type_bright Отправить заявку
+
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

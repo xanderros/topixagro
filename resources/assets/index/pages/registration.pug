@@ -1,0 +1,424 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Личный кабинет')
+                        .top
+                            h1.top__title.title Авторизация
+                        .reg
+                            .reg__nav
+                                +submenu('submenu_resp_mob','Уже зарегистрирован', {
+                                    title: 'Уже зарегистрирован'
+                                }, {
+                                    title: 'Новый пользователь'
+                                })
+                            form.reg__form.form
+                                .form__row.form__notice Регистрация возможна только для юридических лиц и индивидуальных предпринимателей
+                                .form__row
+                                    label.form__label Страна
+                                    +submenu('submenu_resp_mob submenu_wall','Беларусь', {
+                                        title: 'Беларусь'
+                                    }, {
+                                        title: 'Россия'
+                                    })
+                                .form__row.form__error
+                                    label.form__label УНП
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .form__error-message Данный УНП не существует
+                                .form__row
+                                    label.form__label УНП
+                                    .form__control.form__control_loading
+                                        input.form__input(type="text")
+                                        .form__error-message Данный УНП не существует
+                                        .form__action.form__action_spinner
+                                            span.form__mark.loader.loader_input
+                                        .form__action.form__action_check
+                                            span.form__mark.icon.icon_check
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_checkbox")
+                                .form__row
+                                    label.form__label УНП
+                                    .form__control.form__control_check
+                                        input.form__input(type="text")
+                                        .form__error-message Данный УНП не существует
+                                        .form__action.form__action_spinner
+                                            span.form__mark.loader.loader_input
+                                        .form__action.form__action_check
+                                            span.form__mark.icon.icon_check
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_checkbox")
+                                .form__row
+                                    label.form__label Название организации
+                                    .form__control
+                                        input.form__input(type="text")
+                                .form__row
+                                    label.form__label Название организации
+                                    .form__control
+                                        input.form__input(type="text" disabled="disabled")
+                                .form__row
+                                    label.form__label ФИО
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Данный человек будет являться администратором личного кабинета
+                                .form__row
+                                    label.form__label Должность
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Например, директор
+                                .form__row
+                                    label.form__label Мобильный телефон
+                                    .form__control
+                                        input.form__input(type="tel")
+                                        .hint
+                                            .hint__container Этот телефон понадобится для входа в личный кабинет и на него будет отправлена SMS с кодом активации
+                                .form__row
+                                    .form__note
+                                        a.link-dark(href="#")
+                                            span.link-dark__text Изменить номер телефона
+                                .form__row.form__error
+                                    label.form__label Реквизиты
+                                    .form__control
+                                        .attach
+                                            .attach__item
+                                                a.attach__del(href="#")
+                                                    span.attach__icon.icon.icon_close
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_close")
+                                                a.attach__link.link-dark(href="#")
+                                                    span.link-dark__text Реквизиты.docx
+                                            .attach__item
+                                                a.attach__del(href="#")
+                                                    span.attach__icon.icon.icon_close
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_close")
+                                                a.attach__link.link-dark(href="#")
+                                                    span.link-dark__text Реквизиты.docx
+                                        .file.file_small.file_loading
+                                            .file__container
+                                                .file__upload
+                                                    input.file__input(type="file")
+                                                    .file__select
+                                                        span.file__clip-icon.icon.icon_clip
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_clip")
+                                                        .file__link Прикрепить файл
+                                            .file__info
+                                                .form__error-message Недопустимый формат файла
+                                                .file__notice до 10 Мб, допустимый формат doc, docx, rtf, pdf, xls
+                                            .file__loader
+                                                span.loader.loader_file
+                                            .hint
+                                                .hint__container Файл с полным юридическим и физическим адресом, банковские реквизиты.
+                                .form__row
+                                    label.form__label Введите код из SMS
+                                    .form__control.form__control_sms
+                                        input.form__input(type="text")
+                                        .form__error-message Неверный код
+                                .form__row
+                                    .form__note Не получили SMS?
+                                        a.link-dark(href="#")
+                                            span.link-dark__text  Повторить попытку
+                                .form__btn
+                                    button(type="submit").btn.btn_type_bright Продолжить
+                        .reg
+                            .reg__nav
+                                +submenu('submenu_resp_mob','Уже зарегистрирован', {
+                                    title: 'Уже зарегистрирован'
+                                }, {
+                                    title: 'Новый пользователь'
+                                })
+                            form.reg__form.form
+                                .form__row.form__notice Регистрация возможна только для юридических лиц и индивидуальных предпринимателей
+                                .form__row
+                                    label.form__label Страна
+                                    +submenu('submenu_resp_mob submenu_wall','Беларусь', {
+                                        title: 'Беларусь'
+                                    }, {
+                                        title: 'Россия'
+                                    })
+                                .form__row
+                                    label.form__label УНП
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .form__error-message Данный УНП не существует
+                                .form__row
+                                    label.form__label Название организации
+                                    .form__control
+                                        input.form__input(type="text")
+                                .form__row
+                                    label.form__label ФИО
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Данный человек будет являться администратором личного кабинета
+                                .form__row
+                                    label.form__label Должность
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Например, директор
+                                .form__row
+                                    label.form__label Мобильный телефон
+                                    .form__control
+                                        input.form__input(type="tel")
+                                        .hint
+                                            .hint__container Этот телефон понадобится для входа в личный кабинет и на него будет отправлена SMS с кодом активации
+                                .form__row
+                                    label.form__label Реквизиты
+                                    .form__control
+                                        .file.file_small
+                                            .file__container
+                                                .file__upload
+                                                    input.file__input(type="file")
+                                                    .file__select
+                                                        span.file__clip-icon.icon.icon_clip
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_clip")
+                                                        .file__link Прикрепить файл
+                                            .file__info
+                                                .form__error-message Недопустимый формат файла
+                                                .file__notice до 10 Мб, допустимый формат doc, docx, rtf, pdf, xls
+                                            .file__loader
+                                                span.loader.loader_file
+                                            .hint
+                                                .hint__container Файл с полным юридическим и физическим адресом, банковские реквизиты.
+                                .form__btn
+                                    button(type="submit").btn.btn_type_bright Продолжить
+                        .reg
+                            .reg__nav
+                                +submenu('submenu_resp_mob','Уже зарегистрирован', {
+                                    title: 'Уже зарегистрирован'
+                                }, {
+                                    title: 'Новый пользователь'
+                                })
+                            form.reg__form.form
+                                .form__row.form__notice Регистрация возможна только для юридических лиц и индивидуальных предпринимателей
+                                .form__row
+                                    label.form__label Страна
+                                    +submenu('submenu_resp_mob submenu_wall','Беларусь', {
+                                        title: 'Беларусь'
+                                    }, {
+                                        title: 'Россия'
+                                    })
+                                .form__row.form__error
+                                    label.form__label УНП
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .form__error-message Данный УНП не существует
+                                .form__row
+                                    label.form__label Название организации
+                                    .form__control
+                                        input.form__input(type="text")
+                                .form__row
+                                    label.form__label ФИО
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Данный человек будет являться администратором личного кабинета
+                                .form__row
+                                    label.form__label Должность
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Например, директор
+                                .form__row
+                                    label.form__label Мобильный телефон
+                                    .form__control
+                                        input.form__input(type="tel")
+                                        .hint
+                                            .hint__container Этот телефон понадобится для входа в личный кабинет и на него будет отправлена SMS с кодом активации
+                                .form__row.form__error
+                                    label.form__label Реквизиты
+                                    .form__control
+                                        .file.file_small
+                                            .file__container
+                                                .file__upload
+                                                    input.file__input(type="file")
+                                                    .file__select
+                                                        span.file__clip-icon.icon.icon_clip
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_clip")
+                                                        .file__link Прикрепить файл
+                                            .file__info
+                                                .form__error-message Недопустимый формат файла
+                                                .file__notice до 10 Мб, допустимый формат doc, docx, rtf, pdf, xls
+                                            .file__loader
+                                                span.loader.loader_file
+                                            .hint
+                                                .hint__container Файл с полным юридическим и физическим адресом, банковские реквизиты.
+                                .form__btn
+                                    button(type="submit").btn.btn_type_bright Продолжить
+                        .reg
+                            .reg__nav
+                                +submenu('submenu_resp_mob','Уже зарегистрирован', {
+                                    title: 'Уже зарегистрирован'
+                                }, {
+                                    title: 'Новый пользователь'
+                                })
+                            form.reg__form.form
+                                .form__row.form__notice Регистрация возможна только для юридических лиц и индивидуальных предпринимателей
+                                .form__row
+                                    label.form__label Страна
+                                    +submenu('submenu_resp_mob submenu_wall','Беларусь', {
+                                        title: 'Беларусь'
+                                    }, {
+                                        title: 'Россия'
+                                    })
+                                .form__row
+                                    label.form__label УНП
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .form__error-message Данный УНП не существует
+                                .form__row
+                                    label.form__label Название организации
+                                    .form__control
+                                        input.form__input(type="text")
+                                .form__row
+                                    label.form__label ФИО
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Данный человек будет являться администратором личного кабинета
+                                .form__row
+                                    label.form__label Должность
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Например, директор
+                                .form__row
+                                    label.form__label Мобильный телефон
+                                    .form__control
+                                        input.form__input(type="tel")
+                                        .hint
+                                            .hint__container Этот телефон понадобится для входа в личный кабинет и на него будет отправлена SMS с кодом активации
+                                .form__row
+                                    .form__note
+                                        a.link-dark(href="#")
+                                            span.link-dark__text Изменить номер телефона
+                                .form__row
+                                    label.form__label Реквизиты
+                                    .form__control
+                                        .file.file_small
+                                            .file__container
+                                                .file__upload
+                                                    input.file__input(type="file")
+                                                    .file__select
+                                                        span.file__clip-icon.icon.icon_clip
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_clip")
+                                                        .file__link Прикрепить файл
+                                            .file__info
+                                                .form__error-message Недопустимый формат файла
+                                                .file__notice до 10 Мб, допустимый формат doc, docx, rtf, pdf, xls
+                                            .file__loader
+                                                span.loader.loader_file
+                                            .hint
+                                                .hint__container Файл с полным юридическим и физическим адресом, банковские реквизиты.
+                                .form__row
+                                    label.form__label Введите код из SMS
+                                    .form__control.form__control_sms
+                                        input.form__input(type="text")
+                                        .form__error-message Неверный код
+                                .form__row
+                                    .form__note Не получили SMS?
+                                        a.link-dark(href="#")
+                                            span.link-dark__text  Повторить попытку
+                                .form__btn
+                                    button(type="submit").btn.btn_type_bright Зарегистрироваться
+                        .reg
+                            .reg__nav
+                                +submenu('submenu_resp_mob','Уже зарегистрирован', {
+                                    title: 'Уже зарегистрирован'
+                                }, {
+                                    title: 'Новый пользователь'
+                                })
+                            form.reg__form.form
+                                .form__row.form__notice Регистрация возможна только для юридических лиц и индивидуальных предпринимателей
+                                .form__row
+                                    label.form__label Страна
+                                    +submenu('submenu_resp_mob submenu_wall','Беларусь', {
+                                        title: 'Беларусь'
+                                    }, {
+                                        title: 'Россия'
+                                    })
+                                .form__row
+                                    label.form__label УНП
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .form__error-message Данный УНП не существует
+                                .form__row
+                                    label.form__label Название организации
+                                    .form__control
+                                        input.form__input(type="text" disabled="disabled")
+                                .form__row
+                                    label.form__label ФИО
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Данный человек будет являться администратором личного кабинета
+                                .form__row
+                                    label.form__label Должность
+                                    .form__control
+                                        input.form__input(type="text")
+                                        .hint
+                                            .hint__container Например, директор
+                                .form__row
+                                    label.form__label Мобильный телефон
+                                    .form__control
+                                        input.form__input(type="tel")
+                                        .hint
+                                            .hint__container Этот телефон понадобится для входа в личный кабинет и на него будет отправлена SMS с кодом активации
+                                .form__row
+                                    label.form__label Реквизиты
+                                    .form__control
+                                        .attach
+                                            .attach__item
+                                                a.attach__del(href="#")
+                                                    span.attach__icon.icon.icon_close
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_close")
+                                                a.attach__link.link-dark(href="#")
+                                                    span.link-dark__text Реквизиты.docx
+                                            .attach__item
+                                                a.attach__del(href="#")
+                                                    span.attach__icon.icon.icon_close
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_close")
+                                                a.attach__link.link-dark(href="#")
+                                                    span.link-dark__text Реквизиты.docx
+                                        .file.file_small
+                                            .file__container
+                                                .file__upload
+                                                    input.file__input(type="file")
+                                                    .file__select
+                                                        span.file__clip-icon.icon.icon_clip
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_clip")
+                                                        .file__link Прикрепить файл
+                                            .file__info
+                                                .form__error-message Недопустимый формат файла
+                                                .file__notice до 10 Мб, допустимый формат doc, docx, rtf, pdf, xls
+                                            .file__loader
+                                                span.loader.loader_file
+                                            .hint
+                                                .hint__container Файл с полным юридическим и физическим адресом, банковские реквизиты.
+                                .form__btn
+                                    button(type="submit").btn.btn_type_bright Продолжить
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

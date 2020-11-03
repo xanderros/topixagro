@@ -1,0 +1,116 @@
+.popup {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 0;
+	background-color: @overlayColor;
+	z-index: 6500;
+	visibility: hidden;
+	backface-visibility: hidden;
+	opacity: 0;
+	transform: scale(0);
+	transition: visibility 0s ease @popupTransition,
+	transform 0s ease @popupTransition,
+	opacity @popupTransition ease,
+	width 0s ease @popupTransition,
+	height 0s ease @popupTransition;
+
+	&:before {
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		content: '';
+	}
+
+	&__box {
+		position: relative;
+		display: inline-block;
+		box-sizing: border-box;
+		white-space: normal;
+		vertical-align: middle;
+		text-align: left;
+		padding: 20px;
+		width: 450px;
+		font-size: 14px;
+		opacity: 0;
+		-webkit-transform: translateZ(0px);
+		transform: scale(0.6);
+		transition: transform @popupTransition ease,
+		opacity @popupTransition ease;
+	}
+	&__body {
+		position: relative;
+		box-sizing: border-box;
+		background-color: #f3f3f3;
+		border-bottom: 3px solid #22a3fe;
+		box-shadow: 0 3px 8px 0 rgba(34,163,254,.41);
+		transition: padding .2s ease;
+	}
+	&__header {
+		position: relative;
+		background-color: #fff;
+		padding: 9px 50px 13px 29px;
+	}
+	&__content {
+		padding: 33px 29px 38px;
+	}
+	&__title {
+		font-size: 24px;
+		line-height: 1.3;
+		box-sizing: border-box;
+	}
+	&__close {
+		position: absolute;
+		top: 16px;
+		right: 20px;
+		cursor: pointer;
+	}
+	&__icon {
+		&.icon_close {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	/* opened popup */
+	&_show {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+		transition: transform 0s ease,
+		opacity @popupTransition ease;
+
+		.popup {
+			&__box {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		&__box {
+			width: 100%;
+		}
+		&__header {
+			padding: 9px 35px 13px 20px;
+		}
+		&__content {
+			padding: 17px 20px 31px;
+		}
+		&__title {
+			font-size: 22px;
+		}
+		&__close {
+			top: 15px;
+			right: 20px;
+		}
+	}
+}

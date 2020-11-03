@@ -1,0 +1,191 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Личный кабинет')
+                        .top
+                            h1.top__title.title Профиль
+                        .layout.layout_profile
+                            .layout__side
+                                .submenu.submenu_side.js-sub
+                                    .submenu__default
+                                        a.submenu__all.js-sub__btn(href="#") Профиль
+                                    ul.submenu__list.js-sub__content
+                                        li.submenu__item.submenu__item_active
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_profile
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_profile")
+                                                span.submenu__text Профиль
+                                        li.submenu__item
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_orders
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_orders")
+                                                span.submenu__text Заказы
+                                        li.submenu__item.submenu__item_last
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_exit
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_exit")
+                                                span.submenu__text Выход
+                                .aside.aside_desktop
+                                    a.aside__link(href="#")
+                                        img.aside__img(src="../assets/index/images/markup/aside_1.jpg" alt="")
+                            .layout__base
+                                .bordered.mb-large
+                                    .profile
+                                        .profile__person
+                                            figure.profile__figure
+                                                //img.profile__img(src="../assets/index/images/markup/card_1.jpg" alt="")
+                                                span.profile__icon.icon.icon_profile
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_20")
+                                            .profile__base
+                                                .profile__title Здравствуйте,
+                                                .profile__name Алексей Александрович
+                                        .profile__row
+                                            .profile__text
+                                                | <span class="profile__caption">УНП:</span> 198654454
+                                            .profile__text
+                                                | <span class="profile__caption">Организация:</span> ИП Быков Алексей Александрович
+                                        .profile__bottom
+                                            a.link-dark(href="#")
+                                                span.link-dark__text Редактировать профиль
+                                .subtitle Действующие заказы (2)
+                                .orders.orders_all.mb-large
+                                    .orders__row.orders__row_head
+                                        .orders__info
+                                            .orders__cell.orders__cell_number Номер заказа
+                                            .orders__cell.orders__cell_cost Стоимость
+                                            .orders__cell.orders__cell_manager Менеджер
+                                        .orders__actions
+                                            .orders__cell.orders__cell_download Счет
+                                            .orders__cell.orders__cell_state Статус
+                                    .orders__row
+                                        .orders__info
+                                            .orders__cell.orders__cell_number
+                                                .orders__number №12055034
+                                                .orders__date 4 апреля 2016 в 11:49
+                                            .orders__cell.orders__cell_cost
+                                                .orders__cost 14 товаров на 40 989 р.
+                                            .orders__cell.orders__cell_manager
+                                                .human
+                                                    figure.human__figure
+                                                        //span.human__icon.icon.icon_20
+                                                        //    svg.icon__item
+                                                        //        use(xlink:href="#icon_20")
+                                                        img.human__img(src="../assets/index/images/markup/human_1.jpg" alt="")
+                                                    .human__title Ольга Иванова
+                                        .orders__actions
+                                            .orders__cell.orders__cell_download
+                                                a.orders__download.download(href="#")
+                                                    span.download__icon.icon.icon_download
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_download")
+                                                    .download__link(href="#")
+                                                        span.download__text Скачать счет
+                                            .orders__cell.orders__cell_state
+                                                .state
+                                                    span.state__icon
+                                                        .icon.icon_time
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_time")
+                                                    .state__text В обработке
+                                        a.orders__link(href="#")
+                                    .orders__row
+                                        .orders__info
+                                            .orders__cell.orders__cell_number
+                                                .orders__number №12055034
+                                                .orders__date 4 апреля 2016 в 11:49
+                                            .orders__cell.orders__cell_cost
+                                                .orders__cost 14 товаров на 40 989 р.
+                                            .orders__cell.orders__cell_manager
+                                                .human
+                                                    figure.human__figure
+                                                        span.human__icon.icon.icon_20
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_20")
+                                                    .human__title Константин Александровский
+                                        .orders__actions
+                                            .orders__cell.orders__cell_download
+                                                a.orders__download.download(href="#")
+                                                    span.download__icon.icon.icon_download
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_download")
+                                                    .download__link(href="#")
+                                                        span.download__text Скачать счет
+                                            .orders__cell.orders__cell_state
+                                                .state
+                                                    span.state__icon
+                                                        .icon.icon_close-big
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_close")
+                                                    .state__text Отменен
+                                        a.orders__link(href="#")
+                                    .orders__bottom
+                                        a.link-dark(href="#")
+                                            span.link-dark__text Все заказы
+                                .subtitle Персональный менеджер компании и контакты
+                                .grid.grid_cards.mb-xlarge
+                                    .grid__cell
+                                        .wall.wall_light
+                                            .card.card_simple
+                                                figure.card__figure
+                                                    img.card__img(src="../assets/index/images/markup/card_1.jpg" alt="")
+                                                    //img.card__img(src="holder.js/100x100?theme=topic&auto=true" alt="")
+                                                .card__box
+                                                    .card__title Константин Забнин
+                                                    .card__info Менеджер по направлению
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__link.link-dark(href="mailto:cc@topixagro.com")
+                                                            span.link-dark__text cc@topixagro.com
+                                                    .wall__line
+                                                        a.btn.btn_type_bright.btn_size_wide(href="#") Написать
+                                                    .wall__line
+                                                        a.wall__link.link-dark(href="skype:topixagro?chat")
+                                                            span.link-dark__text Написать в скайп
+                                    .grid__cell
+                                        .wall.wall_light.wall_mid
+                                            .wall__info
+                                                .wall__caption Консультация по доставке
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Возврат товара
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Техническая поддержка
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Бухгалтерия
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Юридический отдел
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+
+
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

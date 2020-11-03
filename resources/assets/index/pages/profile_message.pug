@@ -1,0 +1,139 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Личный кабинет')
+                        .top
+                            h1.top__title.title Сообщение менеджеру
+                        .layout.layout_profile
+                            .layout__side
+                                .submenu.submenu_side.js-sub
+                                    .submenu__default
+                                        a.submenu__all.js-sub__btn(href="#") Профиль
+                                    ul.submenu__list.js-sub__content
+                                        li.submenu__item.submenu__item_active
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_profile
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_profile")
+                                                span.submenu__text Профиль
+                                        li.submenu__item
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_orders
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_orders")
+                                                span.submenu__text Заказы
+                                        li.submenu__item.submenu__item_last
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_exit
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_exit")
+                                                span.submenu__text Выход
+                                .aside.aside_desktop
+                                    a.aside__link(href="#")
+                                        img.aside__img(src="../assets/index/images/markup/aside_1.jpg" alt="")
+                            .layout__base
+                                form.form.mb-xlarge
+                                    .form__row
+                                        label.form__label Кому
+                                        .form__control
+                                            .human
+                                                figure.human__figure
+                                                    //span.human__icon.icon.icon_20
+                                                    //    svg.icon__item
+                                                    //        use(xlink:href="#icon_20")
+                                                    img.human__img(src="../assets/index/images/markup/human_1.jpg" alt="")
+                                                span.human__title Созонова Светлана
+                                    .form__row
+                                        label.form__label Сообщение
+                                        .form__control
+                                            textarea.form__textarea(rows="6")
+                                    .form__row.form__required
+                                        label.form__label Электронная почта (не обязательно)
+                                        .form__control
+                                            input.form__input(type="email")
+                                            .form__error-message Необходимо указать адрес электронной почты
+                                    .form__btn
+                                        button(type="submit").btn.btn_type_bright Отправить
+                                .subtitle Персональный менеджер компании и контакты
+                                .grid.grid_cards.mb-xlarge
+                                    .grid__cell
+                                        .wall.wall_light
+                                            .card.card_simple
+                                                figure.card__figure
+                                                    img.card__img(src="../assets/index/images/markup/card_1.jpg" alt="")
+                                                    //img.card__img(src="holder.js/100x100?theme=topic&auto=true" alt="")
+                                                .card__box
+                                                    .card__title Константин Забнин
+                                                    .card__info Менеджер по направлению
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__link.link-dark(href="mailto:cc@topixagro.com")
+                                                            span.link-dark__text cc@topixagro.com
+                                                    .wall__line
+                                                        a.btn.btn_type_bright.btn_size_wide(href="#") Написать
+                                                    .wall__line
+                                                        a.wall__link.link-dark(href="skype:topixagro?chat")
+                                                            span.link-dark__text Написать в скайп
+                                    .grid__cell
+                                        .wall.wall_light
+                                            .card.card_simple
+                                                figure.card__figure
+                                                    img.card__img(src="../assets/index/images/markup/card_1.jpg" alt="")
+                                                    //img.card__img(src="holder.js/100x100?theme=topic&auto=true" alt="")
+                                                .card__box
+                                                    .card__title Константин Забнин
+                                                    .card__info Менеджер по направлению
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__link.link-dark(href="mailto:cc@topixagro.com")
+                                                            span.link-dark__text cc@topixagro.com
+                                                    .wall__line
+                                                        a.btn.btn_type_bright.btn_size_wide(href="#") Написать
+                                                    .wall__line
+                                                        a.wall__link.link-dark(href="skype:topixagro?chat")
+                                                            span.link-dark__text Написать в скайп
+                                    .grid__cell
+                                        .wall.wall_light.wall_mid
+                                            .wall__info
+                                                .wall__caption Консультация по доставке
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Возврат товара
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Техническая поддержка
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Бухгалтерия
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Юридический отдел
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+
+
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

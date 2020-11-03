@@ -1,0 +1,61 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        .top
+                            h1.top__title.title Макеты страниц
+                        .content.mb-big
+                            h2 Страницы сайта:
+                            - var links = [{title: 'Главная',href: 'main'},{title: 'Каталог - список категорий', href: 'categories'},{title: 'Каталог', href: 'catalog'},{title: 'Страница продукта', href: 'product'},{title: 'Услуги', href: 'services'},{title: 'Услуга', href: 'service-page'},{title: 'Проект', href: 'project'},{title: 'Доставка и оплата', href: 'delivery'},{title: 'Партнерство', href: 'partnership'},{title: 'О компании', href: 'about'},{title: 'Страница бренда', href: 'brand'},{title: 'Блог', href: 'blog'},{title: 'Статья в блоге', href: 'article'},{title: 'Производители', href: 'brands'},{title: 'Сер тификаты и дипломы', href: 'diploms'},{title: 'Отзывы клиентов', href: 'reviews'},{title: 'Контакты', href: 'contacts'},{title: 'Корзина', href: 'cart'},{title: 'Результаты поиска', href: 'search'},{title: 'Страница не найдена - ошибка 404', href: '404'}, {title: 'Расширенный поиск (к body Добавляется класс search-opened)', href: 'search-opened'}, {title: 'Спасибо за заявку', href: 'thanks'}];
+                            ul
+                                each item in links
+                                    li
+                                        a(href="/markup/" + item.href + ".html" target="_blank")
+                                            = item.title
+                            h2 Личный кабинет:
+                            - var links = [{title: 'Авторизация',href: 'profile_login'},{title: 'Регистрация', href: 'registration'},{title: 'Профиль', href: 'profile_main'},{title: 'Профиль. Редактирование профиля', href: 'profile_edit'},{title: 'Профиль. Ваше сообщение отправлено', href: 'profile_message_success'},{title: 'Профиль. Спасибо за регистрацию!', href: 'profile_start'},{title: 'Профиль. Сообщение менеджеру', href: 'profile_message'},{title: 'Профиль. Профиль на модерации', href: 'profile_success_edit'},{title: 'Заказы', href: 'profile_orders'},{title: 'Страница одного заказа', href: 'profile_order'}];
+                                ul
+                                    each item in links
+                                        li
+                                            a(href="/markup/" + item.href + ".html" target="_blank")
+                                                = item.title
+                            h2 Попапы:
+                            ul
+                                li
+                                    a(href="#" data-popup="popup_call_1") Обратный звонок
+                                li
+                                    a(href="#" data-popup="popup_call_2") Обратный звонок (сообщение)
+                .overlay
+            +footer
+        +popup('call_1')
+            form.form
+                .form__row.form__required.form__error
+                    label.form__label Представьтесь, пожалуйста
+                    .form__control
+                        input.form__input(type="text")
+                        .form__error-message Необходимо указать имя
+                .form__row.form__required
+                    label.form__label Контактный телефон
+                    .form__control
+                        input.form__input(type="text")
+                        .form__error-message Необходимо указать телефон
+                .form__btn
+                    button(type="submit").btn.btn_type_bright Перезвоните мне
+        +popup('call_2')
+            .heading Спасибо!
+            .content
+                p Не выключайте, пожалуйста,свой телефон. Мы скоро перезвоним!
+                p До связи :)
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

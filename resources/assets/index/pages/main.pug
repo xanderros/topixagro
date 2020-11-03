@@ -1,0 +1,315 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container.container_main
+                    .panel.panel_parallax(style="background-image:url(../assets/index/images/layout/panel_1.jpg)")
+                        .panel__video
+                            .panel__video-frame#bg-video
+                        .panel__box
+                            .panel__container
+                                .panel__heading TOPIX AGRO — это:
+                                .panel__caption Оборудование для <br>животноводства
+                                .panel__controls
+                                    .panel__row.panel__row_play
+                                        a.panel__play(href="#")
+                                            span.panel__wave.panel__wave_1
+                                            span.panel__wave.panel__wave_2
+                                            span.panel__wave.panel__wave_3
+                                            span.panel__icon.icon.icon_play
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_play")
+                                        .panel__title Видео-ролик о компании
+                                        .panel__name Topix Agro
+                                    .panel__row.panel__row_time
+                                        .panel__duration 1:42
+
+                    .box
+                        ul.menu
+                            li.menu__item
+                                a.menu__link(href="#")
+                                    span.menu__grid
+                                        span.menu__side
+                                            span.menu__icon.icon.icon_31
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_31")
+                                        span.menu__base
+                                            span.menu__title Каталог
+                                .menu__desc Группа компаний ТОПИКС АГРО являет лидером рынка по ассортименту и наличию товара на складе для животноводства и птицеводства
+                            li.menu__item
+                                a.menu__link(href="#")
+                                    span.menu__grid
+                                        span.menu__side
+                                            span.menu__icon.icon.icon_32
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_32")
+                                        span.menu__base
+                                            span.menu__title Услуги
+                                .menu__desc Основные направления деятельности ГК Топикс Агро – внедрение новейших инновационных технологий для ведения сельского хозяйства от ведущих мировых производителей.
+                            li.menu__item
+                                a.menu__link(href="#")
+                                    span.menu__grid
+                                        span.menu__side
+                                            span.menu__icon.icon.icon_33
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_33")
+                                        span.menu__base
+                                            span.menu__title Партнерство
+                                .menu__desc Мы приветствуем новых партнеров способных предложить новые ассортиментные позиции или имеющих интересные ценовые предложения и нацеленных на долгосрочное сотрудничество.
+
+                        .tabs.js-tabs
+                            ul.tabs__nav
+                                li.tabs__item.tabs__item_active
+                                    a.tabs__link(href="#tab-1") Каталог товаров
+                                li.tabs__item
+                                    a.tabs__link(href="#tab-2") По направлению
+                            .tabs__container
+                                .tabs__box#tab-1
+                                    .tabs__text.content
+                                        p Мы готовы укомплектовать животноводческие комплексы оборудованием ведущих мировых и белорусских производителей.
+                                    .grid.grid_catalog
+                                        - var number = 1;
+                                        - var items = [ {title: 'Вентиляции', desc: 'Спирально-навивные, прямошовные', icons: [{icon: 'cow'}, {icon: 'pig'}, {icon: 'chicken'}]}, {title: 'Доильное оборудование Доильное оборудование', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Клеточное оборудование', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'chicken'}]}, {title: 'Комлектации', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Кормление', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}, {icon: 'pig'}, {icon: 'chicken'}]}, {title: 'Лабораторное оборудование', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Метизы, крепеж, трос, лебедки', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Моющие и дезинфицирующие средства', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Навозоудаление', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Освещение', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Отопление', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Охлаждение', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Перчатки, бахилы, накидки, фартуки', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Поение', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'},{icon: 'pig'},{icon: 'chicken'}]}, {title: 'Санитария', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Содержание', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'chicken'}]}, {title: 'Техника', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'pig'}]}, {title: 'Уход за КРС', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Яйцесбор', desc: 'Спирально-навивные', icons: [{icon: 'chicken'}]} ]
+                                        each item in items
+                                            - var count = number++
+                                            .grid__cell
+                                                .category.category_simple
+                                                    a.category__container(href="#")
+                                                        img.category__img(src="../assets/index/images/markup/category_" + count + ".jpg" alt="")
+                                                        //img.category__img(src="holder.js/354x315?theme=topic&auto=true" alt="")
+                                                        .category__layer
+                                                            .category__box
+                                                                if item.icons
+                                                                    .category__icons
+                                                                        each icon in item.icons
+                                                                            span.category__icon.icon(class="icon_" + icon.icon)
+                                                                                svg.icon__item
+                                                                                    use(xlink:href="#icon_" + icon.icon)
+                                                                .category__title=item.title
+                                                                .category__bottom
+                                                                    .category__desc=item.desc
+
+                                .tabs__box#tab-2
+                                    .grid.grid_direction
+                                        - var number = 1
+                                        - var items = [ { title: 'Фермы КРС', icon: 'cow', menu: [{name: 'Системы увлажнения — охлаждения высокого давления', count: '32'}, {name: 'Системы увлажнения', count: '20'}, {name: 'Кормораздача ', count: '11'}, {name: 'Поилки', count: '23'}, {name: 'Навозоудаление', count: '121'}, {name: 'Кормораздача', count: '11'}, {name: 'Поилки', count: '21'}, {name: 'Птица', count: '43'}, {name: 'Кормораздача', count: '3'}, {name: 'Навозоудаление', count: '76'}] }, { title: 'Свиноводство', icon: 'pig', menu: [{name: 'Системы увлажнения — охлаждения высокого давления', count: '32'}, {name: 'Системы увлажнения', count: '20'}, {name: 'Кормораздача ', count: '11'}, {name: 'Поилки', count: '23'}, {name: 'Навозоудаление', count: '121'}, {name: 'Кормораздача', count: '11'}, {name: 'Поилки', count: '21'}, {name: 'Птица', count: '43'}, {name: 'Кормораздача', count: '3'}, {name: 'Навозоудаление', count: '76'}] },{ title: 'Птицеводство', icon: 'chicken', menu: [{name: 'Системы увлажнения — охлаждения высокого давления', count: '32'}, {name: 'Системы увлажнения', count: '20'}, {name: 'Кормораздача ', count: '11'}, {name: 'Поилки', count: '23'}, {name: 'Навозоудаление', count: '121'}, {name: 'Кормораздача', count: '11'}, {name: 'Поилки', count: '21'}, {name: 'Птица', count: '43'}, {name: 'Кормораздача', count: '3'}, {name: 'Навозоудаление', count: '76'}] } ]
+                                        each item in items
+                                            - var count = number++
+                                            .grid__cell
+                                                .category.category_big
+                                                    a.category__container(href="#")
+                                                        img.category__img(src="../assets/index/images/markup/category_big_" + count + ".jpg" alt="")
+                                                        //img.category__img(src="holder.js/386x450?theme=topic&auto=true" alt="")
+                                                        .category__layer
+                                                            .category__box
+                                                                .category__icons
+                                                                    span.category__icon.icon(class="icon_" + item.icon)
+                                                                        svg.icon__item
+                                                                            use(xlink:href="#icon_" + item.icon)
+                                                                .category__title=item.title
+                                                    ul.category__menu
+                                                        each unit in item.menu
+                                                            li.category__item
+                                                                a.category__link(href="#")
+                                                                    span.category__text=unit.name
+                                                                    span.category__count=unit.count
+
+                        .section
+                            .layout.layout_wide
+                                .layout__side
+                                    .layout__head
+                                        h3.layout__title Бренды
+                                        .layout__desc Мы готовы укомплектовать животноводческие комплексы оборудованием ведущих мировых и белорусских производителей.
+                                .layout__base
+                                    +brands('Все производители', '10')
+                        hr.hr.hr_wide
+                        .section
+                            .layout.layout_wide
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        .layout__title Услуги
+                                        .layout__desc Основные направления деятельности нашей компании – внедрение новейших инновационных технологий для ведения сельского хозяйства от ведущих мировых производителей.
+                                .layout__base
+                                    .grid.grid_services
+                                        - var number = 1;
+                                        - var items = [{title:'Проектирование животноводческих комплексов'},{title:'Монтажные работы любого оборудования'},{title:'Техническое обслуживание'},{title:'Сервисное обслуживание'}]
+                                        each item in items
+                                            - var count = number++
+                                            .grid__cell
+                                                .service
+                                                    a.service__link(href="#")
+                                                        img.service__img-main(src="../assets/index/images/markup/service_" + count + ".jpg" alt="")
+                                                        img.service__img-hover(src="../assets/index/images/markup/service_" + count + "_hover.jpg" alt="")
+                                                        //img.service__img-main(src="holder.js/505x343?theme=topic&auto=true" alt="")
+                                                        //img.service__img-hover(src="holder.js/505x343?theme=darken&auto=true" alt="")
+                                                        h3.service__caption=item.title
+                                                    if item.desc
+                                                        .service__desc=item.desc
+
+                    .section.section_dark
+                        .box
+                            .layout.layout_content
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        .layout__top
+                                            .layout__title Более 1000 реализованных проектов
+                                            .layout__desc Почти 100-лет совместного опыта на всех сотрудников! Это не все, прибавьте еще опыт наших партнеров и Вы согласитесь – нам есть, что Вам предложить!
+                                    .layout__more
+                                        a.more(href="#")
+                                            span.more__text Все проекты
+                                            span.more__icon.icon.icon_arrow-right
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_arrow-right")
+                                .layout__base
+                                    .layout__photo
+                                        img.layout__pic(src="../assets/index/images/markup/project_1.jpg" alt="")
+                                    .layout__gallery
+                                        .carousel.carousel_projects
+                                            img.carousel__item(src="../assets/index/images/markup/project_1.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/project_1.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/project_1.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/project_1.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/project_1.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/project_1.jpg" alt="")
+
+                                    article.layout__project
+                                        .layout__top
+                                            a.ref.link(href="#")
+                                                span.ref__icon.icon.icon_reset
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_reset")
+                                                .ref__lit
+                                                    span.link__text Другой проект
+                                        .layout__note
+                                            a.layout__figure(href="#")
+                                                img.layout__img(src="../assets/index/images/markup/project_1.jpg" alt="")
+                                            a.layout__heading(href="#")
+                                                h3.layout__caption СХП «Авангард» — миксера и насосы для лагун
+                                        p.layout__info Топикс Агро реализовало еще один проект по системе хранения и гомогенизации навозных стоков с свинокомплекса.  На территории свиноводческого комплекса СХП "Авангард" будет использоваться две лагуны для хранения навоза, в данные лагуны мы установили миксера для навоза TMR на наклонных направляющих, что бы была возможность перемешивать навоз на всей
+
+                                        .layout__bottom
+                                            a.more.more_big(href="#")
+                                                span.more__text Посмотреть
+                                                span.more__icon.icon.icon_arrow-right
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_arrow-right")
+                                .layout__more-bottom
+                                    a.more(href="#")
+                                        span.more__text Все проекты
+                                        span.more__icon.icon.icon_arrow-right
+                                            svg.icon__item
+                                                use(xlink:href="#icon_arrow-right")
+
+                    .box
+                        .section
+                            .layout.layout_middle
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        .layout__top
+                                            .layout__title Наш блог
+                                            .layout__more-hidden
+                                                a.ref.link(href="#")
+                                                    span.ref__icon.icon.icon_reset
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_reset")
+                                                    .ref__lit
+                                                        span.link__text Другой проект
+                                        .layout__nav
+                                            ul.layout__list.list.list_big
+                                                li.list__item
+                                                    a.list__link(href="#") Фермы КРС
+                                                li.list__item
+                                                    a.list__link(href="#") Свиноводство
+                                                li.list__item
+                                                    a.list__link(href="#") Птицеводство
+                                            ul.layout__list.list.list_big
+                                                li.list__item
+                                                    a.list__link(href="#") О компании
+                                                li.list__item
+                                                    a.list__link(href="#") Акции
+                                    .layout__more
+                                        a.ref.link(href="#")
+                                            span.ref__icon.icon.icon_reset
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_reset")
+                                            .ref__lit
+                                                span.link__text Другой проект
+                                .layout__base
+                                    +blog('3', {
+                                        mod: 'sale',
+                                        picBg: 'picBg',
+                                        caption: 'Акция',
+                                        title: 'Самозагрузочные обмотчики рулонов SCORPIO всего за 24100',
+                                    }, {
+                                        mod: 'card',
+                                        picOne: 'picOne',
+                                        title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                                    }, {
+                                        mod: 'border',
+                                        title: 'Инновационная технология доения от Milkrite',
+                                        desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                                    })
+                    .advantages
+                        .advantages__box.box
+                            .advantages__side
+                                h2.advantages__title Группа компаний «Топикс агро»
+                            .advantages__base
+                                .advantages__row
+                                    ul.advantages__line
+                                        li.advantages__unit
+                                            .advantages__value 118 000
+                                            .advantages__desc номенклатурных позиций животноводческого оборудования
+                                        li.advantages__unit
+                                            .advantages__value 5000
+                                            .advantages__desc потребителей ежегодно становятся обладателями нашего оборудования
+                                        li.advantages__unit
+                                            .advantages__value 12
+                                            .advantages__desc лет безупречной работы на рынке животноводства
+                                .advantages__row
+                                    .advantages__text Мы занимается поставками и монтажом оборудования, для животноводства и птицеводства. Оказывает услуги в области разработки технологических решений для молочно-товарных комплексов, свиноферм и птицефабрик.
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        script.
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/player_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+            function onYouTubePlayerAPIReady() {
+                player = new YT.Player('bg-video', {
+                    height: '800',
+                    width: '1280',
+                    videoId: 'EZiRLYlnm28',
+                    playerVars: {
+                        'autoplay': 0,
+                        'controls': 0,
+                        'disablekb': 1,
+                        'fs': 0,
+                        'iv_load_policy': 3,
+                        'modestbranding': 1,
+                        'rel': 0,
+                        'showinfo': 0
+                    }
+                });
+            }
+            function playVideo(e) {
+                e.preventDefault();
+                player.playVideo();
+
+                var $panel = $('.panel');
+                $panel.addClass('panel_play');
+            }
+            $(document).on('click', '.panel__play', playVideo);
+
+        +browser-update

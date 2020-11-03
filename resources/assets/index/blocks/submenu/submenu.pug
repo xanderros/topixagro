@@ -1,0 +1,14 @@
+mixin submenu(mod,def,active,...items)
+    .submenu.js-sub(class=mod)
+        .submenu__default
+            a.submenu__all.js-sub__btn(href="#")=def
+        ul.submenu__list.js-sub__content
+            li.submenu__item.submenu__item_active
+                a.submenu__link(href="#")
+                    span.submenu__text=active.title
+                    span.submenu__count=active.count
+            each item in items
+                li.submenu__item
+                    a.submenu__link(href="#")
+                        span.submenu__text=item.title
+                        span.submenu__count=item.count

@@ -1,0 +1,43 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box.thanks
+                        .thanks__inner
+                            svg.thanks__icon
+                               use(xlink:href="#icon_checkbox")
+                            .thanks__title Спасибо за заявку
+                            .thanks__descr В течение 15 минут наш менеджер свяжется с Вами для обсуждения вашего вопроса
+                .overlay
+            +footer
+        +popup('call_1')
+            form.form
+                .form__row.form__required.form__error
+                    label.form__label Представьтесь, пожалуйста
+                    .form__control
+                        input.form__input(type="text")
+                        .form__error-message Необходимо указать имя
+                .form__row.form__required
+                    label.form__label Контактный телефон
+                    .form__control
+                        input.form__input(type="text")
+                        .form__error-message Необходимо указать телефон
+                .form__btn
+                    button(type="submit").btn.btn_type_bright Перезвоните мне
+        +popup('call_2')
+            .heading Спасибо!
+            .content
+                p Не выключайте, пожалуйста, свой телефон. Мы скоро перезвоним!
+                p До связи :)
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

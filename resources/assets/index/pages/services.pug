@@ -1,0 +1,37 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                        .top
+                            h1.top__title.title Услуги
+                        .grid.grid_services.mb-big
+                            - var number = 1;
+                            - var items = [{title:'Проектирование животноводческих комплексов', desc:'Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления. От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования.'}, {title:'Монтажные работы любого оборудования',desc:'От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования.'},{title:'Техническое обслуживание', desc:'Группа Компаний «Топикс Агро» оказывает инжиниринговые услуги по проектированию объектов сельскохозяйственного назначения, а также предоставляет все необходимые сведения, позволяющие оценить перспективность проекта'},{title:'Сервисное обслуживание',desc:'От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования. Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления.'}]
+                            each item in items
+                                - var count = number++
+                                .grid__cell
+                                    .service
+                                        a.service__link(href="#")
+                                            img.service__img-main(src="../assets/index/images/markup/service_" + count + ".jpg" alt="")
+                                            img.service__img-hover(src="../assets/index/images/markup/service_" + count + "_hover.jpg" alt="")
+                                            //img.service__img-main(src="holder.js/595x404?theme=topic&auto=true" alt="")
+                                            //img.service__img-hover(src="holder.js/595x404?theme=darken&auto=true" alt="")
+                                            h3.service__caption=item.title
+                                        if item.desc
+                                            .service__desc=item.desc
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

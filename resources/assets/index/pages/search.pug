@@ -1,0 +1,215 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная','Поиск')
+                        .top.top_min
+                            h1.top__title.title
+                                span.title__mark Результаты поиска:
+                                | Венти
+                        .sort.sort_search
+                            .sort__base
+                                +submenu('submenu_resp_mob submenu_inner','Все товары', {
+                                    title: 'Товары',
+                                    count: '38'
+                                },{title: 'Категории', count: '48'},{title: 'Статьи', count: '41'})
+                            .sort__side
+                                .sort__select
+                                    .sort__item
+                                        .sort__title Сначала:
+                                        +select('','Новые','Популярные','Рейтинговые')
+                                    .sort__item
+                                        .sort__title На странице:
+                                        +select('5','10','20')
+                                .sort__view
+                                    .switcher
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-table" type="radio")
+                                            label.switcher__label(for="switcher-table")
+                                                span.switcher__icon.icon.icon_table
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_table")
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-row" type="radio")
+                                            label.switcher__label(for="switcher-row")
+                                                span.switcher__icon.icon.icon_row
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_row")
+
+                        .grid.grid_view_table
+                            +product('', {
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно',
+                                parts: 'parts'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                imgSize: '200x100',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                notexist: 'Запросить цену',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см',
+                                price: '5 250',
+                                delivery: 'Доставка на 8 ноября',
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                notexist: 'Запросить цену',
+                                delivery: 'Доставка на 8 ноября',
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            })
+                        +paginator('border')
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

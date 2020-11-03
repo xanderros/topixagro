@@ -1,0 +1,15 @@
+mixin brands(button,counter)
+    .brands
+        - var number = 1;
+        while number < counter
+            - var count = number++
+            .brands__cell
+                a.brands__link(href="#")
+                    img.brands__img(src="../assets/index/images/markup/brand_" + count + ".jpg" alt="")
+                    //img.brands__img(src="holder.js/181x105?theme=topic&auto=true" alt="")
+        .brands__cell.brands__cell_button
+            a.brands__btn(href="#")
+                span.brands__text=button
+                span.brands__icon.icon.icon_arrow-right
+                    svg.icon__item
+                        use(xlink:href="#icon_arrow-right")

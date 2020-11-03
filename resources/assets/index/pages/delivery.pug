@@ -1,0 +1,60 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная', 'Информация')
+                        article.article
+                            .top
+                                h1.top__title.title Доставка и оплата
+                            .layout.layout_text.mb-large
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__subtitle Доставка по Москве и Московской области
+                                .layout__base
+                                    .content
+                                        p Все оплаченные Вами заказы мы можем доставить в удобное для Вас время и место.
+                                        p
+                                            | <strong>При сумме заказа более 10 000 рублей</strong>, доставка по Москве и Московской области в пределах А107 	(ММК — Московское малое кольцо) осуществляется <span class="mark">БЕСПЛАТНО!</span>
+                                        p Доставка за пределы А107 (ММК — Московское малое кольцо) оплачивается дополнительно и рассчитывается по индивидуальным запросам.
+                                        p Все товары с признаком "в наличии" можно забрать в день оплаты заказа со склада.
+                                        p Любые Ваши заказы доступны для самовывоза.
+                            .layout.layout_text.mb-large
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__subtitle Доставка в регионы РФ
+                                .layout__base
+                                    .content
+                                        p
+                                            | <strong>При общей стоимости Заказа более 10 000 рублей</strong>, доставка до терминала транспортной компании 		по Москве и Московской области в пределах А107 (ММК — Московское малое кольцо осуществляется <span class="mark">БЕСПЛАТНО!</span>
+                                        p Нашими ключевыми партнёрами являются транспортные компании "Деловые Линии» и «ПЭК». Также мы готовы рассмотреть Ваше предложение по выбору транспортной компании.
+                                        p Организация доставки осуществляется в течение трёх рабочих дней с момента готовности оплаченного Вами Заказа.
+                            .layout.layout_text.mb-large
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__subtitle Самовывоз
+                                .layout__base
+                                    .content
+                                        p Вы можете самостоятельно забрать приобретённое оборудование с нашего склада в рабочее время,если это вам удобно.
+                                        table
+                                            tr
+                                                th Время работы склада:
+                                                td
+                                                    | Понедельник — Четверг<br>c 9:00 до 18:00
+                                                td
+                                                    | Пятница<br>с 9:00 до 17:00
+                                        p Всю информацию о доставке Вы можете посмотреть в разделе <a href="#">доставка</a>.
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

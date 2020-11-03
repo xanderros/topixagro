@@ -1,0 +1,127 @@
+.brands {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-left: -10px;
+	margin-right: -10px;
+
+	&__cell {
+		box-sizing: border-box;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 20%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:nth-child(n+6) {
+			margin-top: 20px;
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: @textGrey;
+	}
+	&__img {
+		//max-width: 100%;/*replay*/
+	}
+	&__btn {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: bold;
+		border: 2px solid @green;
+		padding: 10px 8px;
+		text-align: center;
+		height: 100%;
+		width: 100%;
+		word-wrap: break-word;
+	}
+	&__text {
+		.linkText(@green, transparent);
+	}
+	&__icon.icon {
+		display: none;
+	}
+
+	@media screen and (max-width: 1270px) {
+		&__img {
+			max-width: 100%;/*del*/
+		}
+	}
+
+	@media screen and (min-width: 701px) and (max-width: 870px) {
+		&__cell {
+			width: 25%;
+
+			&:nth-child(n+5) {
+				margin-top: 20px;
+			}
+			&:nth-child(n+8):not(.brands__cell_button) {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 700px) {
+		&__cell {
+			width: 33.33%;
+
+			&:nth-child(n+4) {
+				margin-top: 20px;
+			}
+
+			&_button {
+				margin-top: 25px!important;
+				width: 100%;
+			}
+		}
+		&__btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 22px;
+			border: none;
+			padding: 6px 8px;
+
+			&:hover {
+				.brands {
+					&__text {
+						.linkTextHover(#94e55c, #dcf6c9);
+					}
+				}
+			}
+		}
+		&__text {
+			.linkText(@greenText, transparent);
+		}
+		&__icon.icon {
+			display: block;
+			margin-top: 2px;
+			margin-left: 18px;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		&__cell {
+			width: 50%;
+
+			&:nth-child(n+3) {
+				margin-top: 20px;
+			}
+			&:nth-child(n+7):not(.brands__cell_button) {
+				display: none;
+			}
+
+			&_button {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}

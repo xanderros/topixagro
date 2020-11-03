@@ -1,0 +1,33 @@
+.social {
+	display: flex;
+
+	&__item {
+		opacity: 1;
+		transition: opacity @bgTransition ease;
+		margin-right: 21px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 1px solid #646361;
+		transition: border-color @linkTransition ease,
+					background-color @linkTransition ease;
+
+		&:hover {
+			background-color: @green;
+			border-color: @green;
+		}
+	}
+	&__icon {
+		fill: #fff;
+		transition: fill @bgTransition ease;
+	}
+}

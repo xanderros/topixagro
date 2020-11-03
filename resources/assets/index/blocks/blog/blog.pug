@@ -1,0 +1,38 @@
+mixin blog(size,...items)
+    .grid(class="grid_mb-40 grid_blog_size-" + size)
+        - var number = 1;
+        each item in items
+            -var count = number++
+            -var date = count+10
+            .grid__cell(class=item.modGrid ? 'grid__cell_big' : '')
+                article.blog(class="blog_" + item.mod)
+                    a.blog__container(href="#")
+                        if item.picBig
+                            figure.blog__figure
+                                img.blog__img(src="../assets/index/images/markup/blog_big.jpg" alt="")
+                                //img.blog__img(src="holder.js/686x439?theme=darken&auto=true" alt="")
+                        if item.picOne
+                            figure.blog__figure
+                                img.blog__img(src="../assets/index/images/markup/blog_1.jpg" alt="")
+                                //img.blog__img(src="holder.js/440x359?theme=darken&auto=true" alt="")
+                        if item.pic
+                            figure.blog__figure
+                                img.blog__img(src="../assets/index/images/markup/blog_" + count + ".jpg" alt="")
+                                //img.blog__img(src="holder.js/440x359?theme=darken&auto=true" alt="")
+                        .blog__info
+                            if item.caption
+                                .blog__line
+                                    .blog__caption=item.caption
+                                    .blog__period
+                                        | Действует до
+                                        time.blog__date(datetime="2017-03-" + date)= date + " марта"
+                            else
+                                time.blog__date(datetime="2017-03-" + date)= date + " марта"
+                            .blog__title
+                                span.blog__text=item.title
+                            if item.desc
+                                .blog__desc=item.desc
+                        if item.picBg
+                            figure.blog__figure
+                                img.blog__img(src="../assets/index/images/markup/blog_discount.png" alt="")
+                                //img.blog__img(src="holder.js/440x150?theme=darken&auto=true" alt="")

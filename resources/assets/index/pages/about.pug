@@ -1,0 +1,152 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная', 'Информация')
+                    article.article
+                        .box
+                            .top
+                                h1.top__title.title О компании
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Группа Компаний «Топикс Агро»
+                                .layout__base
+                                    .content
+                                        p
+                                            | <strong>Группа Компаний «Топикс Агро» – занимается разработкой технологических решений, поставкой и монтажом оборудования для животноводства.</strong>
+                                        p Основные направления деятельности нашей компании – внедрение новейших инновационных технологий для ведения сельского хозяйства от ведущих мировых производителей. Кроме того, Топикс Агро стала компанией, производящей высококачественные, надежные товары и технические системы для молочного и зоотехнического оборудования.
+                                        p Специалисты нашего предприятия постоянно посещают международные выставки и проводят мониторинг новых достижений в производстве сельхозоборудования и ведения сельского хозяйства, выбирая своими партнерами и поставщиками только ведущих производителей.
+                                        p
+                                            img(src="../assets/index/images/markup/content_1.jpg" alt="")
+                                        p Стабильность, огромное количество товара на складе, квалифицированная техническая поддержка, наличие выездных бригад и гарантийного (сервисного) обслуживания – все это позволило нам привлечь и с каждым днем увеличивать число наших постоянных партнеров и клиентов.
+                        .advantages.mb-xlarge
+                            .advantages__box.box
+                                .advantages__side
+                                    h2.advantages__title Наши преимущества
+                                .advantages__base
+                                    .advantages__grid
+                                        ul.advantages__list
+                                            li.advantages__item Дробеструйная обработка металла
+                                            li.advantages__item Раскрой листового металла на машинах газовой и плазменной резки
+                                            li.advantages__item Изготовление электросварной балки
+                                            li.advantages__item Раскрой проката
+                                            li.advantages__item Изготовление комплектующих
+                                            li.advantages__item Сборка и сварка металлоконструкций
+                                            li.advantages__item Дробеструйная обработка готовых изделий (II ступень)
+                                            li.advantages__item Покраска
+                        .box
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Современное оборудование
+                                        .layout__desc Высокий уровень оснащенности современным высокоточным технологическим оборудованием.
+                                .layout__base
+                                    .slider.slider_simple
+                                        .slider__box.slider__box_content
+                                            - var number = 1;
+                                            - var items = [ {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)', placeholder: 'placeholder'} ];
+                                            each item in items
+                                                -var count = number
+                                                .slider__item
+                                                    if item.placeholder
+                                                        img.slider__img(src="../assets/index/images/markup/slider_sm_" + count + ".jpg" alt="")
+                                                        //img.slider__img(src="holder.js/984x606?theme=topic&auto=true" alt="")
+                                                    else
+                                                        img.slider__img(src="../assets/index/images/markup/slider_sm_" + count + ".jpg" alt="")
+                                                    .slider__title=item.title
+                                        .slider__box.slider__box_nav
+                                            - var numberTh = 1;
+                                            each item in items
+                                                -var countTh = numberTh
+                                                .slider__thumb
+                                                    if item.placeholder
+                                                        img.slider__img(src="../assets/index/images/markup/slider_sm_thumb_" + countTh + ".jpg" alt="")
+                                                        //img.slider__img(src="holder.js/167x103?theme=topic&auto=true" alt="")
+                                                    else
+                                                        img.slider__img(src="../assets/index/images/markup/slider_sm_thumb_" + countTh + ".jpg" alt="")
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Качество — непрерывное движение к совершенству
+                                .layout__base
+                                    .content
+                                        p Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления. От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования. Если контроль действий монтажников производится изготовителем системы, это позволяет «на ходу» корректировать работу и устранять некоторые возможные ошибки. Приведем несколько примеров проблем, с которыми может столкнуться персонал, монтирующий вентиляционную систему.
+                                        ol
+                                            li Замеры помещения и толщины перекрытий, проведенные при разработке проекта, могут оказаться неточными — особенно часто это встречается при проектировании параллельно с ремонтом или строительством здания. В этом случае может понадобиться нарастить или укоротить воздуховоды, установить не предусмотренные проектом элементы — а это может повлечь необходимость изменения некоторых параметров работы оборудования.
+                                            li Заказчик не согласен на пробивку стен в предусмотренных проектом местах — воздуховоды приходится прокладывать по-другому.
+                                            li Отдельные агрегаты в системе дают сбой и нужно оперативно определить его причину.
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__title Корпоративные ценности — базис успеха
+                                .layout__base
+                                    .content
+                                       p Именно специалисты, представляющие производителя оборудования, в состоянии максимально быстро решить возникающие проблемы и не сорвать при этом сроки монтажа. Их участие в работе монтажников значительно снижает процент возможных ошибок и неполадок, которые могут проявить себя уже после окончательного запуска системы вентиляции. Шеф-монтаж — гарантия безаварийного функционирования всего комплекса оборудования, повышения его надежности и срока службы.
+                                       p Представители корпорации обладают всеми необходимыми компетенциями для проведения профессионального контроля монтажа и пусконаладки вентиляционной системы любой сложности — будь то вентиляция небольшого кафе или масштабная система подачи и вывода воздуха огромного производственного цеха. Наши услуги сэкономят ваше время и средства предприятия!
+                        .section.section_dark.mb-large
+                            .box
+                                .layout.layout_wide.js-exp
+                                    .layout__side
+                                        .layout__head.layout__head_underline
+                                            h2.layout__title Команда
+                                        .layout__show
+                                            .select.select_left
+                                                a.select__default.js-exp__btn(href="#")
+                                                    span.select__def.select__def_show Показать еще
+                                                    span.select__def.select__def_hidden Свернуть
+                                    .layout__base
+                                        .grid.grid_team
+                                            - var number = 1;
+                                            while number < 7
+                                                - var count = number++
+                                                .grid__cell
+                                                    .person
+                                                        figure.person__figure
+                                                            img.person__img(src="../assets/index/images/markup/card_" + count + ".jpg" alt="")
+                                                            //img.person__img(src="holder.js/200x200?theme=topic&auto=true" alt="")
+                                                        .person__box
+                                                            .person__title
+                                                                | Капура <br>Алексей Дмитриевич
+                                                            .person__info
+                                                                | CEO <br>TOPIX GROUP
+                                                            .person__row
+                                                                a.person__link.link-dark(href="mailto:adk@topixagro.com")
+                                                                    span.link-dark__text adk@topixagro.com
+
+                                        .layout__show-bottom
+                                            .select.select_left
+                                                a.select__default.js-exp__btn(href="#")
+                                                    span.select__def.select__def_show Показать еще
+                                                    span.select__def.select__def_hidden Свернуть
+                        .box.mb-xlarge
+                            .layout.layout_wide
+                                .layout__side
+                                    .layout__head
+                                        h3.layout__title Клиенты
+                                        .layout__desc Мы готовы укомплектовать животноводческие комплексы оборудованием ведущих мировых и белорусских производителей.
+                                .layout__base
+                                    +brands('Все клиенты', '10')
+                            hr.hr.hr_wide.hr_bottom
+                            .layout.layout_wide
+                                .layout__side
+                                    .layout__head
+                                        h3.layout__title Партнеры
+                                        .layout__desc Мы готовы укомплектовать животноводческие комплексы оборудованием ведущих мировых и белорусских производителей.
+                                .layout__base
+                                    +brands('Все партнеры', '10')
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

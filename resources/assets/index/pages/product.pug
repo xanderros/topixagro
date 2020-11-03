@@ -1,0 +1,465 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная','Каталог','Системы увлажнения-охлаждения высокого давления')
+                        .top
+                            h1.top__title.title Газовый воздухонагреватель ERMAF GP 14
+                        .sep.sep_product.mb-big
+                            .sep__base
+                                .net
+                                    .net__gallery
+                                        .carousel.carousel_product
+                                            a.carousel__item(href="https://youtu.be/EZiRLYlnm28")
+                                            img.carousel__item(src="../assets/index/images/markup/carousel_1.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/carousel_2.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/carousel_3.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/carousel_1.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/carousel_2.jpg" alt="")
+                                            img.carousel__item(src="../assets/index/images/markup/carousel_3.jpg" alt="")
+                                            //img.carousel__item(src="holder.js/384x384?theme=topic&auto=true" alt="")
+                                    .net__content
+                                        .table
+                                            table.table__box
+                                                tr.table__tr
+                                                    th.table__th Цена:
+                                                    td.table__td
+                                                        span.table__big По договоренности
+                                                tr.table__tr
+                                                    th.table__th Артикул:
+                                                    td.table__td H50515010
+                                                tr.table__tr
+                                                    th.table__th Производитель:
+                                                    td.table__td
+                                                        a.link-dark(href="#")
+                                                            span.link-dark__text Kawasaki
+                                                tr.table__tr
+                                                    th.table__th Срок отгрузки:
+                                                    td.table__td В тот же день
+                                                tr.table__tr
+                                                    th.table__th Срок доставки:
+                                                    td.table__td 2-6 рабочих дня*
+                                        hr.hr.hr_min
+                                        .row
+                                            .small-title Дополнительные услуги:
+                                            select.multiselect.js-select-multiple.js-select-services(multiple="multiple" data-placeholder="Выберите услуги")
+                                                option.multiselect__option(value="Проектирование") Проектирование
+                                                option.multiselect__option(value="Сервисная служба") Сервисная служба
+                                                option.multiselect__option(value="Проектный отдел") Проектный отдел
+                                                option.multiselect__option(value="Комплексное решение") Комплексное решение
+                                                option.multiselect__option(value="Готовые проекты") Готовые проекты
+                                        .row
+                                            .small-title Количество:
+                                            .net__line
+                                                .actions
+                                                    .actions__counter
+                                                        .counter
+                                                            .counter__btn.counter__btn_minus
+                                                                span.counter__icon.icon.icon_minus
+                                                                    svg.icon__item
+                                                                        use(xlink:href="#icon_minus")
+                                                            .counter__result
+                                                                input.counter__number(type="tel" value="1" readonly="readonly")
+                                                                .counter__unit шт
+                                                            .counter__btn.counter__btn_plus
+                                                                span.counter__icon.icon.icon_plus
+                                                                    svg.icon__item
+                                                                        use(xlink:href="#icon_plus")
+                                                    .actions__btn
+                                                        a.btn.btn_type_flat-big(href="#") Запросить цену
+
+                                        hr.hr.hr_min
+                                        .net__social
+                                            script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+                                            script(src="//yastatic.net/share2/share.js" async="async")
+                                            .social-likes.ya-share2(data-services="collections,vkontakte,facebook,odnoklassniki,moimir" data-counter)
+                            .sep__side
+                                .wall.wall_light
+                                    .wall__grid.wall__grid_info
+                                        .wall__cell
+                                            .subtitle Цена по договоренности
+                                            .wall__desc Цена указана ориентировочная и зависит от объема заказа, габаритов, параметров
+                                            .wall__btn
+                                                a.btn.btn_type_bright.btn_size_wide(href="#") Заказать
+                                        .wall__cell
+                                            .wall__labels
+                                                .wall__item
+                                                    .wall__label
+                                                        span.wall__icon.icon.icon_car
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_car")
+                                                        .wall__note Быстрая доставка
+                                                .wall__item
+                                                    .wall__label
+                                                        span.wall__icon.icon.icon_garantee
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_garantee")
+                                                        .wall__note
+                                                            | Гарантия <br>24 месяца
+                                        .wall__cell.wall__cell_wide
+                                            .small-title Дополнительные услуги
+                                            ul.list.list_small
+                                                li.list__item
+                                                    a.list__link(href="#") Проектирование
+                                                li.list__item
+                                                    a.list__link(href="#") Технологические решения
+                                                li.list__item
+                                                    a.list__link(href="#") Монтаж и пусконаладка
+                                                li.list__item
+                                                    a.list__link(href="#") Ремонт
+                                                li.list__item
+                                                    a.list__link(href="#") Сервисно-техническое обслуживание
+
+                        .mb-large
+                            .caption
+                                h2.caption__title.subtitle Запасные детали
+                                .caption__nav
+                                    .switcher
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-table" type="radio" checked="checked")
+                                            label.switcher__label(for="switcher-table")
+                                                span.switcher__icon.icon.icon_table
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_table")
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-row" type="radio")
+                                            label.switcher__label(for="switcher-row")
+                                                span.switcher__icon.icon.icon_row
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_row")
+
+                            .js-exp
+                                .grid.grid_view_table.grid_cut_row
+                                    +product('', {
+                                        title: 'Воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см',
+                                        price: '5 250',
+                                        delivery: 'Доставка на 8 ноября',
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        notexist: 'Запросить цену',
+                                        delivery: 'Доставка на 8 ноября',
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        notexist: 'Запросить цену',
+                                        delivery: 'Доставка на 8 ноября',
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    })
+                                .bottom
+                                    .select.select_left
+                                        a.select__default.js-exp__btn(href="#")
+                                            span.select__def.select__def_show Показать еще
+                                            span.select__def.select__def_hidden Свернуть
+                        .mb-large
+                            h2.subtitle Запасные детали со схемой
+                            .parts
+                                .parts__side
+                                    .parts__figure
+                                        img.parts__img(src="../assets/index/images/markup/parts_1.jpg" alt="")
+                                        //img.parts__img(src="holder.js/100x100?theme=topic&auto=true" alt="")
+                                .parts__base
+                                    .board
+                                        .board__box.board__box_header
+                                            .board__base Запасные детали
+                                            .board__side Цена
+                                        .board__box.board__box_content
+                                            .board__item
+                                                .board__base
+                                                    .board__number 1
+                                                    .board__product
+                                                        .board__title
+                                                            a.link-dark(href="#")
+                                                                span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                        .board__code Артикул: H50515010
+                                                .board__side
+                                                    //.board__value Цена по запросу
+                                                    .board__price
+                                                        .board__cost
+                                                            | 168 475
+                                                            span.board__unit.icon.icon_ruble
+                                                                svg.icon__item
+                                                                    use(xlink:href="#icon_ruble")
+                                                        .board__btn
+                                                            .cart-btn
+                                                                span.cart-btn__field
+                                                                    input.cart-btn__input(value="100" type="text")
+                                                                    span.cart-btn__count шт
+                                                                span.cart-btn__icon.icon.icon_19
+                                                                    svg.icon__item
+                                                                        use(xlink:href="#icon_19")
+                                            .board__item
+                                                .board__base
+                                                    .board__number 2
+                                                    .board__product
+                                                        .board__title
+                                                            a.link-dark(href="#")
+                                                                span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                        .board__code Артикул: H50515010
+                                                .board__side
+                                                    a.link-dark(href="#")
+                                                        span.link-dark__text Запросить цену
+                                            .board__item
+                                                .board__base
+                                                    .board__number 3
+                                                    .board__product
+                                                        .board__title
+                                                            a.link-dark(href="#")
+                                                                span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                        .board__code Артикул: H50515010
+                                                .board__side
+                                                    //.board__value Цена по запросу
+                                                    .board__price
+                                                        .board__cost
+                                                            | 5 500
+                                                            span.board__unit.icon.icon_ruble
+                                                                svg.icon__item
+                                                                    use(xlink:href="#icon_ruble")
+                                                        .board__btn
+                                                            button.cart-btn(type="submit")
+                                                                span.cart-btn__field 1
+                                                                    span.cart-btn__count шт
+                                                                span.cart-btn__icon.icon.icon_19
+                                                                    svg.icon__item
+                                                                        use(xlink:href="#icon_19")
+                                            .board__item
+                                                .board__base
+                                                    .board__number 4
+                                                    .board__product
+                                                        .board__title
+                                                            a.link-dark(href="#")
+                                                                span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                        .board__code Артикул: H50515010
+                                                .board__side
+                                                    //.board__value Цена по запросу
+                                                    .board__price
+                                                        .board__cost
+                                                            | 77 475
+                                                            span.board__unit.icon.icon_ruble
+                                                                svg.icon__item
+                                                                    use(xlink:href="#icon_ruble")
+                                                        .board__btn
+                                                            button.cart-btn(type="submit")
+                                                                span.cart-btn__field 1
+                                                                    span.cart-btn__count шт
+                                                                span.cart-btn__icon.icon.icon_19
+                                                                    svg.icon__item
+                                                                        use(xlink:href="#icon_19")
+                        .sep.sep_product.mb-large
+                            .sep__base
+                                .mb-big
+                                    h2.subtitle Полное описание
+                                    .covering.covering_type_desc.js-covering
+                                        .content.js-covering__content
+                                            p Группа Компаний «Топикс Агро» – занимается разработкой технологических решений, поставкой и монтажом оборудования для животноводства.
+                                            p
+                                                | Основные направления деятельности нашей компании – <strong>внедрение новейших инновационных технологий</strong> для ведения сельского хозяйства от ведущих мировых производителей. Кроме того, Топикс Агро стала компанией, производящей высококачественные, надежные товары и технические системы для молочного и зоотехнического оборудования.
+                                            p Специалисты нашего предприятия постоянно посещают международные выставки и проводят мониторинг новых достижений в производстве сельхозоборудования и ведения сельского хозяйства, выбирая своими партнерами и поставщиками только ведущих производителей.
+                                            p Стабильность, огромное количество товара на складе, квалифицированная техническая поддержка, наличие выездных бригад и гарантийного (сервисного) обслуживания – все это позволило нам привлечь и с каждым днем
+                                            p Специалисты нашего предприятия постоянно посещают международные выставки и проводят мониторинг новых достижений в производстве сельхозоборудования и ведения сельского хозяйства, выбирая своими партнерами и поставщиками только ведущих производителей.
+                                        .covering__row
+                                            .select.select_left
+                                                a.select__default.js-covering__btn(href="#")
+                                                    span.select__def.select__def_show Показать еще
+                                                    span.select__def.select__def_hidden Свернуть
+                                .mb-big
+                                    .half
+                                        .half__cell
+                                            h2.subtitle Технические характеристики
+                                            .table
+                                                table.table__box
+                                                    tr.table__tr
+                                                        th.table__th Артикул:
+                                                        td.table__td H50515010
+                                                    tr.table__tr
+                                                        th.table__th Производитель:
+                                                        td.table__td
+                                                            a.link-dark(href="#")
+                                                                span.link-dark__text Kawasaki
+                                                    tr.table__tr
+                                                        th.table__th Срок отгрузки:
+                                                        td.table__td В тот же день
+                                                    tr.table__tr
+                                                        th.table__th Срок доставки:
+                                                        td.table__td 2-6 рабочих дня*
+                                        .half__cell
+                                            h2.subtitle Сертификаты и гарантия
+                                            .flex.flex_sert
+                                                .flex__cell
+                                                    a.item(href="#")
+                                                        .item__figure
+                                                            img.item__img(src="../assets/index/images/markup/item_1.jpg" alt="")
+                                                        .item__wrap
+                                                            .item__desc
+                                                                span.item__text Сертификат соответствия ГОСТ 20295-85
+                                                .flex__cell
+                                                    a.item(href="#")
+                                                        .item__figure
+                                                            img.item__img(src="../assets/index/images/markup/item_1.jpg" alt="")
+                                                        .item__wrap
+                                                            .item__desc
+                                                                span.item__text Декларация о соответствии таможенного союза
+                                .mb-big
+                                    h2.subtitle Видео
+                                    .video
+                                        figure.video__box
+                                            iframe(width="640" height="360" src="https://www.youtube.com/embed/EZiRLYlnm28?rel=0?ecver=2" frameborder="0" allowfullscreen)
+                                .half
+                                    .half__cell
+                                        h2.subtitle Инструкция
+                                        ul.list.list_content
+                                            li.list__item
+                                                a.list__link(href="#") Скачать инструкцию для McCULLOCH M95-66X
+                                                span.list__mark (19 Mb, pdf)
+                                            li.list__item
+                                                a.list__link(href="#") Скачать инструкцию для воздуханагревателя LOCH M95-66X
+                                                span.list__mark (37 Mb, pdf)
+                                            li.list__item
+                                                a.list__link(href="#") Скачать инструкцию для Kawasaki McCULLOCH M95-66X
+                                                span.list__mark (85 Mb, pdf)
+                                    .half__cell
+                                        h2.subtitle Комплект поставки
+                                        .content
+                                            p Оборудование, ЗИП, передние грузы, задние грузы, инструкция.
+
+                            .sep__side
+                                .wall.wall_bright
+                                    .wall__grid.wall__grid_phones
+                                        .wall__cell.wall__cell_wide
+                                            .subtitle Нужна помощь?
+                                            .wall__desc Наши специалисты готовы предоставить консультации по выбору продукта и ответить на все ваши вопросы
+                                        .wall__cell
+                                            .tel
+                                                .tel__row
+                                                    .tel__title
+                                                        span.tel__icon.icon.icon_17
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_17")
+                                                        | Горячая линия
+                                                    a.tel__link(href="tel:+88001112121") 8 800 111 21 21
+                                                .tel__row
+                                                    a.tel__link(href="tel:+74959256564") +7 (495) 925-65-64
+                                            .wall__btn
+                                                a.btn.btn_type_bright.btn_size_wide(href="#") Обратный звонок
+                                        .wall__cell
+                                            .wall__content
+                                                p Время работы:
+                                                p Понедельник — пятница с 9:00 до 18:00
+                                            .wall__row
+                                                a.wall__link(href="mailto:sales@kapscomoto.com")
+                                                    span.wall__icon-link.icon.icon_email
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_email")
+                                                    span.wall__text sales@kapscomoto.com
+
+                    .section.section_dark
+                        .box
+                            .section__caption.mb-big.text-center
+                                .heading Похожий товар
+                            .grid.grid_view_table.grid_cut_row
+                                +product('', {
+                                    title: 'Воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см',
+                                    price: '5 250',
+                                    delivery: 'Доставка на 8 ноября',
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    notexist: 'Запросить цену',
+                                    delivery: 'Доставка на 8 ноября',
+                                },{
+                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                    imgSize: '240x150',
+                                    category1: 'Навозоудаление',
+                                    category2: 'Топик Агро',
+                                    code: 'Артикул: H50515010',
+                                    desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                    price: '68 188',
+                                    delivery: 'Доставка на 8 ноября',
+                                    exist: 'На складе достаточно'
+                                })
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

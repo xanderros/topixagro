@@ -1,0 +1,69 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Личный кабинет')
+                        .top
+                            h1.top__title.title Авторизация
+                        .reg
+                            .reg__nav
+                                +submenu('submenu_resp_mob','Уже зарегистрирован', {
+                                    title: 'Уже зарегистрирован'
+                                }, {
+                                    title: 'Новый пользователь'
+                                })
+                            form.reg__form.form
+                                .form__row
+                                    label.form__label Мобильный телефон
+                                    .form__control
+                                        input.form__input(type="tel")
+                                        .hint
+                                            .hint__container Этот телефон понадобится для входа в личный кабинет и на него будет отправлена SMS с кодом активации
+                                        .form__error-message Неверный телефон
+                                .form__btn
+                                    button(type="submit").btn.btn_type_bright Получить код по SMS
+                        .reg
+                            .reg__nav
+                                +submenu('submenu_resp_mob','Уже зарегистрирован', {
+                                    title: 'Уже зарегистрирован'
+                                }, {
+                                    title: 'Новый пользователь'
+                                })
+                            form.reg__form.form
+                                .form__row
+                                    label.form__label Мобильный телефон
+                                    .form__control
+                                        input.form__input(type="tel" disabled="disabled")
+                                        .hint
+                                            .hint__container Этот телефон понадобится для входа в личный кабинет и на него будет отправлена SMS с кодом активации
+                                        .form__error-message Неверный телефон
+                                .form__row
+                                    .form__note
+                                        a.link-dark(href="#")
+                                            span.link-dark__text Изменить номер телефона
+                                .form__row
+                                    label.form__label Введите код из SMS
+                                    .form__control.form__control_sms
+                                        input.form__input(type="text")
+                                        .form__error-message Неверный код
+                                .form__row
+                                    .form__note Не получили SMS?
+                                        a.link-dark(href="#")
+                                            span.link-dark__text  Повторить попытку
+                                .form__btn
+                                    button(type="submit").btn.btn_type_bright Войти
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

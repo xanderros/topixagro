@@ -1,0 +1,147 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                        .top
+                            h1.top__title.title Контакты
+                        .form.mb-sm
+                            .flex.flex_contact
+                                .flex__cell.flex__cell_base
+                                    .form__row
+                                        .form__grid.form__grid_field
+                                            .form__cell
+                                                label.form__label Страна
+                                                .form__control
+                                                    select.form__select
+                                                        option.form__option Россия
+                                                        option.form__option Беларусь
+                                            .form__cell
+                                                label.form__label Город
+                                                .form__control
+                                                    select.form__select
+                                                        option.form__option Москва
+                                                        option.form__option Сургут
+                                                        option.form__option Екатеринбург
+                                .flex__cell.flex__cell_side
+                                    .form__row
+                                        label.form__label Поиск
+                                        .form__search-field
+                                            input.form__input.form__input_field(type="text" placeholder="Введите название улицы")
+                                            button.form__submit(type="submit")
+                                                span.form__icon.icon.icon_30
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_30")
+                        .mb-sm
+                            +submenu('submenu_resp_mob','Все адреса', {
+                                title: 'Все'
+                            }, {
+                                title: 'Торговый партнер',
+                                count: '4'
+                            },{
+                                title: 'Розничные точки продаж',
+                                count: '21'
+                            },{
+                                title: 'Интернет-магазины',
+                                count: '21'
+                            })
+
+                    .map#map.mb-large
+                    .box
+                        .flex.flex_content.mb-large
+                            .flex__cell
+                                .caption.caption_big
+                                    h2.caption__title.heading Главный офис
+                                    .caption__nav
+                                        +submenu('submenu_resp_mob','Россия', {
+                                            title: 'Россия'
+                                        }, {
+                                            title: 'Беларусь'
+                                        })
+                                .def
+                                    .def__row
+                                        .def__cell.def__cell_th Адрес:
+                                        .def__cell.def__cell_td 214031, Россия, Смоленская область, Смоленск, ул. Смольянинова, 15
+                                    .def__row
+                                        .def__cell.def__cell_th Время работы:
+                                        .def__cell.def__cell_td
+                                            .def__line
+                                                | Понедельник — Четверг<br>c 9:00 до 18:00
+                                            .def__line
+                                                | Пятница<br>
+                                                | с 9:00 до 17:00
+                                    .def__row
+                                        .def__cell.def__cell_th Электронная почта:
+                                        .def__cell.def__cell_td
+                                            a.link-dark(href="mailto:info@topixagro.com")
+                                                span.link-dark__text info@topixagro.com
+                            .flex__cell
+                                h2.heading Регионы
+                                .contact
+                                    .contact__region
+                                        .form
+                                            label.form__label Регион
+                                            .form__control
+                                                select.form__select
+                                                    option.form__option Россия — Сибирский региональный округ
+                                                    option.form__option Россия — ЦАО
+
+
+                                    .contact__info
+                                        .contact__name Алексей Поднебесный
+                                        .contact__text региональный представитель
+                                        .contact__phones
+                                            .contact__phone
+                                                a.contact__link(href="tel:+74959256564") +7 (495) 925-65-64
+                                            .contact__phone
+                                                a.contact__link(href="tel:+74959256564") +7 (495) 925-65-64
+                                        .contact__row
+                                            a.link-dark(href="http://www.topixagro.com/")
+                                                span.link-dark__text topixagro.com
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        script(type="text/javascript").
+            ymaps.ready(function () {
+                var map = new ymaps.Map('map', {
+                    center: [54.777786, 32.121078],
+                    zoom: 14,
+                    controls: ['zoomControl']
+                });
+
+                /*map.behaviors.disable('scrollZoom');*/
+
+                var myPlacemark1 = new ymaps.Placemark([54.777786, 32.121078], {
+                    balloonContentBody: [
+                        '<div class="baloon">',
+                            '<div class="baloon__title">Топикс Агро</div>',
+                            '<div class="baloon__address">Смоленск, ул.Смольянинова, 15</div>',
+                            '<div class="baloon__links">',
+                                '<div class="baloon__row"><a href="mailto:cc@topixagro.com" class="link-dark"><span class="link-dark__text">cc@topixagro.com</span></a></div>',
+                                '<div class="baloon__row"><a href="http://www.topixagro.com/" class="link-dark"><span class="link-dark__text">topixagro.com</span></a></div>',
+                            '</div>',
+                            '<div class="baloon__phones"><a href="tel:+78002342144" class="baloon__phone">8-800-234-21-44</a></div>',
+                            '<div class="baloon__bottom">',
+                                '<a href="#" class="baloon__btn"> Интернет - магазин </a>',
+                                '<a href="#" class="baloon__btn"> Точка продаж </a>',
+                            '</div>',
+                        '</div>'
+                    ].join('')
+                }, {
+                    balloonImageOffset: [-265, -89]
+                });
+
+                map.geoObjects.add(myPlacemark1);
+            })
+        +browser-update

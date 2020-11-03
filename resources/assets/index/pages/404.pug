@@ -1,0 +1,33 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner.wrapper__inner_404
+                .box
+                    .error404
+                        .error404__side
+                            img.error404__img(src="../assets/index/images/layout/404_bg.jpg" alt="")
+                        .error404__base
+                            .error404__logo
+                                a.logo.logo_error404(href="#")
+                            .error404__title Упс, ошибка 404…
+                            .error404__desc К сожалению, что-то пошло не так и страница потерялась
+                            .error404__bottom
+                                a.error404__btn.btn.btn_type_bright(href="#") Вернуться на главную
+                                .error404__text.content
+                                    p
+                                        | или <a class="error404__link" href="#">перейти в каталог</a>
+
+
+
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

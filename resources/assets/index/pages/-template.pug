@@ -1,0 +1,755 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container.container_main
+                    //.panel.panel_parallax(style="background-image:url(../assets/index/images/layout/panel_1.jpg)")
+                    //    .panel__box.box
+                    //        .panel__container
+                    //            .panel__heading TOPIX AGRO — это:
+                    //            .panel__caption Оборудование для <br>животноводства
+                    //            .panel__controls
+                    //                .panel__row.panel__row_play
+                    //                    .panel__play
+                    //                        .panel__icon
+                    //                    .panel__title Видео-ролик о компании
+                    //                    .panel__name Topix Agro
+                    //                .panel__row.panel__row_time
+                    //                    .panel__duration 1:42
+                    .box(style="padding-top: 30px; padding-bottom: 30px;")
+                        a.btn.btn_loading.btn_type_flat Загрузка
+                            span.loader
+                        a.btn.btn_loading.btn_type_flat-big Загрузка
+                            span.loader
+                        a.btn.btn_type_bright Кнопка
+                    .box
+                        .sep.sep_product
+                            .sep__base
+                                .net
+                                    .net__gallery
+                                        .carousel.carousel_product
+                                            a.carousel__item(href="http://youtube.com/watch?v=C3lWwBslWqg")
+                                            img.carousel__item(src="../assets/index/images/markup/carousel_1.jpg" alt="")
+                                            //img.carousel__item(src="holder.js/384x384?theme=topic&auto=true" alt="")
+                                    .net__content
+                                        .table
+                                            table.table__box
+                                                tr.table__tr
+                                                    th.table__th Цена:
+                                                    td.table__td
+                                                        span.table__big По договоренности
+                                                tr.table__tr
+                                                    th.table__th Артикул:
+                                                    td.table__td H50515010
+                                                tr.table__tr
+                                                    th.table__th Производитель:
+                                                    td.table__td
+                                                        a.link-dark(href="#")
+                                                            span.link-dark__text Kawasaki
+                                                tr.table__tr
+                                                    th.table__th Срок отгрузки:
+                                                    td.table__td В тот же день
+                                                tr.table__tr
+                                                    th.table__th Срок доставки:
+                                                    td.table__td 2-6 рабочих дня*
+                                        hr.hr.hr_min
+                                        .row
+                                            .small-title Дополнительные услуги:
+                                        .row
+                                            .small-title Количество:
+
+                            .sep__side
+                                .wall.wall_light
+                                    .wall__cell
+                                        .subtitle Цена по договоренности
+                                        .wall__desc Цена указана ориентировочная и зависит от объема заказа, габаритов, параметров
+                                        .wall__btn
+                                            a.btn.btn_type_bright.btn_size_wide(href="#") Заказать
+                                    .wall__cell
+                                        .wall__labels
+                                            .wall__item
+                                                .wall__label
+                                                    span.wall__icon.icon.icon_car
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_car")
+                                                    .wall__note Быстрая доставка
+                                            .wall__item
+                                                .wall__label
+                                                    span.wall__icon.icon.icon_garantee
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_garantee")
+                                                    .wall__note
+                                                        | Гарантия <br>24 месяца
+                                    .wall__cell.wall__cell_wide
+                                        .small-title Дополнительные услуги
+                                        ul.layout__list.list.list_small
+                                            li.list__item
+                                                a.list__link(href="#") Проектирование
+                                            li.list__item
+                                                a.list__link(href="#") Технологические решения
+                                            li.list__item
+                                                a.list__link(href="#") Монтаж и пусконаладка
+                                            li.list__item
+                                                a.list__link(href="#") Ремонт
+                                            li.list__item
+                                                a.list__link(href="#") Сервисно-техническое обслуживание
+
+                        .sep.sep_bottom
+                            .sep__base
+                                sdfsf
+                            .sep__side
+                                .wall.wall_bright
+                                    .wall__cell
+                                        .subtitle Нужна помощь?
+                                        .wall__desc Наши специалисты готовы предоставить консультации по выбору продукта и ответить на все ваши вопросы
+                                    .wall__cell
+                                        .tel
+                                            .tel__row
+                                                .tel__title
+                                                    span.tel__icon.icon.icon_17
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_17")
+                                                    | Горячая линия
+                                                a.tel__link(href="tel:+88001112121") 8 800 111 21 21
+                                            .tel__row
+                                                a.tel__link(href="tel:+74959256564") +7 (495) 925-65-64
+                                        .wall__btn
+                                            a.btn.btn_type_bright.btn_size_wide(href="#") Обратный звонок
+                                    .wall__cell
+                                        .wall__content
+                                            p Время работы:
+                                            p Понедельник — пятница с 9:00 до 18:00
+                                        .wall__row
+                                            a.wall__link(href="mailto:sales@kapscomoto.com")
+                                                span.wall__icon-link.icon.icon_email
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_email")
+                                                span.wall__text sales@kapscomoto.com
+
+                        .layout.layout_wide
+                            .layout__side
+                            .layout__base
+                                .slider.slider_simple
+                                    .slider__box.slider__box_content
+                                        - var number = 1;
+                                        - var items = [ {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки балок PME-group (Финляндия)'}, {title: 'Автоматическая линия сварки STE-group (Франция)', placeholder: 'placeholder'} ];
+                                        each item in items
+                                            -var count = number
+                                            .slider__item
+                                                if item.placeholder
+                                                    img.slider__img(src="holder.js/984x606?theme=topic&auto=true" alt="")
+                                                else
+                                                    img.slider__img(src="../assets/index/images/markup/slider_sm_" + count + ".jpg" alt="")
+                                                .slider__title=item.title
+                                    .slider__box.slider__box_nav
+                                        - var numberTh = 1;
+                                        each item in items
+                                            -var countTh = numberTh
+                                            .slider__thumb
+                                                if item.placeholder
+                                                    img.slider__img(src="holder.js/167x103?theme=topic&auto=true" alt="")
+                                                else
+                                                    img.slider__img(src="../assets/index/images/markup/slider_sm_thumb_" + countTh + ".jpg" alt="")
+
+                        .section.section_dark
+                            .box
+                                form.form
+                                    .flex.flex_form
+                                        .flex__cell
+                                            .form__title Данные покупателя
+                                            .form__row.form__required
+                                                label.form__label ФИО контактного лица (обязательно)
+                                                .form__control
+                                                    input.form__input(type="text")
+                                                    .form__error-message Необходимо указать ваши фамилию, имя и отчество
+                                            .form__row.form__required
+                                                label.form__label Электронная почта (обязательно)
+                                                .form__control
+                                                    input.form__input(type="email")
+                                                    .form__error-message Необходимо указать адрес электронной почты
+                                            .form__row.form__required.form__error
+                                                label.form__label Номер телефона (обязательно)
+                                                .form__control
+                                                    input.form__input(type="tel")
+                                                    .form__error-message Необходимо ввести телефон
+                                            .form__row
+                                                label.form__label Компания
+                                                .form__control
+                                                    input.form__input(type="text")
+                                            .form__row.form__required
+                                                label.form__label ИНН (обязательно)
+                                                .form__control
+                                                    input.form__input(type="text")
+                                                    .form__error-message Необходимо ввести ИНН
+                                        .flex__cell
+                                            .form__title Адрес доставки
+                                            .form__row.form__required
+                                                .form__grid.form__grid_field
+                                                    .form__cell
+                                                        label.form__label Регион (обязательно)
+                                                        .form__control
+                                                            select.form__select
+                                                                option.form__option Выбрать
+                                                                option.form__option ЦАО
+                                                    .form__cell
+                                                        label.form__label Город (обязательно)
+                                                        .form__control
+                                                            select.form__select
+                                                                option.form__option Москва
+                                                                option.form__option Сургут
+                                                                option.form__option Екатеринбург
+                                                .form__error-message Необходимо выбрать город
+                                            .form__row
+                                                +radio('form__item', 'delivery', 'Доставка до транспортной компании', 'Доставка до транспортной компании')
+                                            .form__row.form__required
+                                                .form__grid.form__grid_field
+                                                    .form__cell.form__cell_street
+                                                        label.form__label Адрес (обязательно)
+                                                        .form__control
+                                                            input.form__input(type="text" placeholder="Улица")
+                                                    .form__cell.form__cell_house
+                                                        .form__control
+                                                            input.form__input(type="text" placeholder="Дом")
+                                                    .form__cell.form__cell_block
+                                                        .form__control
+                                                            input.form__input(type="text" placeholder="Корпус")
+                                                    .form__cell.form__cell_office
+                                                        .form__control
+                                                            input.form__input(type="text" placeholder="Офис")
+                                                .form__error-message Необходимо указать адрес
+                                            .form__row
+                                                label.form__label Дополнительная информация к заказу
+                                                .form__control
+                                                    textarea.form__textarea(rows="6")
+                                    .form__note После оформления заявки на электронную почту будет выслан счёт для оплаты заказа
+                                    .cover
+                                        .cover__base
+                                            +file('файл-1.jpg','файл-2.jpg')
+                                        .cover__side
+                                            button(type="submit").btn.btn_type_bright Отправить заявку
+
+
+                        +paginator('border')
+                        h1.title Иконки
+                        .testSvg(style="display:block;background-color:#fff")
+                            span.icon.icon_logo
+                                svg.icon__item
+                                    use(xlink:href="#logo")
+                            span.icon.icon_01
+                                svg.icon__item
+                                    use(xlink:href="#icon_01")
+                            span.icon.icon_02
+                                svg.icon__item
+                                    use(xlink:href="#icon_02")
+                            span.icon.icon_03
+                                svg.icon__item
+                                    use(xlink:href="#icon_03")
+                            span.icon.icon_04
+                                svg.icon__item
+                                    use(xlink:href="#icon_04")
+                            span.icon.icon_05
+                                svg.icon__item
+                                    use(xlink:href="#icon_05")
+                            span.icon.icon_06
+                                svg.icon__item
+                                    use(xlink:href="#icon_06")
+                            span.icon.icon_pay
+                                svg.icon__item
+                                    use(xlink:href="#icon_pay")
+                            span.icon.icon_08
+                                svg.icon__item
+                                    use(xlink:href="#icon_08")
+                            span.icon.icon_09
+                                svg.icon__item
+                                    use(xlink:href="#icon_09")
+                            span.icon.icon_10
+                                svg.icon__item
+                                    use(xlink:href="#icon_10")
+                            span.icon.icon_11
+                                svg.icon__item
+                                    use(xlink:href="#icon_11")
+                            span.icon.icon_12
+                                svg.icon__item
+                                    use(xlink:href="#icon_12")
+                            span.icon.icon_13
+                                svg.icon__item
+                                    use(xlink:href="#icon_13")
+                            span.icon.icon_14
+                                svg.icon__item
+                                    use(xlink:href="#icon_14")
+                            span.icon.icon_15
+                                svg.icon__item
+                                    use(xlink:href="#icon_15")
+                            span.icon.icon_16
+                                svg.icon__item
+                                    use(xlink:href="#icon_16")
+                            span.icon.icon_17
+                                svg.icon__item
+                                    use(xlink:href="#icon_17")
+                            span.icon.icon_18
+                                svg.icon__item
+                                    use(xlink:href="#icon_18")
+                            span.icon.icon_19
+                                svg.icon__item
+                                    use(xlink:href="#icon_19")
+                            span.icon.icon_20
+                                svg.icon__item
+                                    use(xlink:href="#icon_20")
+                            span.icon.icon_21
+                                svg.icon__item
+                                    use(xlink:href="#icon_21")
+                            span.icon.icon_22
+                                svg.icon__item
+                                    use(xlink:href="#icon_22")
+                            span.icon.icon_23
+                                svg.icon__item
+                                    use(xlink:href="#icon_23")
+                            span.icon.icon_24
+                                svg.icon__item
+                                    use(xlink:href="#icon_24")
+                            span.icon.icon_25
+                                svg.icon__item
+                                    use(xlink:href="#icon_25")
+                            span.icon.icon_26
+                                svg.icon__item
+                                    use(xlink:href="#icon_26")
+                            span.icon.icon_27
+                                svg.icon__item
+                                    use(xlink:href="#icon_27")
+                            span.icon.icon_28
+                                svg.icon__item
+                                    use(xlink:href="#icon_28")
+                            span.icon.icon_29
+                                svg.icon__item
+                                    use(xlink:href="#icon_29")
+                            span.icon.icon_30
+                                svg.icon__item
+                                    use(xlink:href="#icon_30")
+                            span.icon.icon_31
+                                svg.icon__item
+                                    use(xlink:href="#icon_31")
+                            span.icon.icon_32
+                                svg.icon__item
+                                    use(xlink:href="#icon_32")
+                            span.icon.icon_33
+                                svg.icon__item
+                                    use(xlink:href="#icon_33")
+                            span.icon.icon_34
+                                svg.icon__item
+                                    use(xlink:href="#icon_34")
+                            span.icon.icon_35
+                                svg.icon__item
+                                    use(xlink:href="#icon_35")
+                            span.icon.icon_36
+                                svg.icon__item
+                                    use(xlink:href="#icon_36")
+                            span.icon.icon_37
+                                svg.icon__item
+                                    use(xlink:href="#icon_37")
+                            span.icon.icon_38
+                                svg.icon__item
+                                    use(xlink:href="#icon_38")
+                            span.icon.icon_navbtn
+                                svg.icon__item
+                                    use(xlink:href="#icon_navbtn")
+                            span.icon.icon_arrow-left
+                                svg.icon__item
+                                    use(xlink:href="#icon_arrow-left")
+                            span.icon.icon_arrow-right
+                                svg.icon__item
+                                    use(xlink:href="#icon_arrow-right")
+                            span.icon.icon_cow
+                                svg.icon__item
+                                    use(xlink:href="#icon_cow")
+                            span.icon.icon_pig
+                                svg.icon__item
+                                    use(xlink:href="#icon_pig")
+                            span.icon.icon_chicken
+                                svg.icon__item
+                                    use(xlink:href="#icon_chicken")
+                        +breadcrumbs('Главная', 'Поиск')
+                        .top
+                            h1.top__title.title
+                                span.title__mark Результаты поиска:
+                                | Венти
+                        .bar
+                            .bar__side
+                                +submenu('submenu_resp_mob','Все товары', {title: 'Товары', count: '38'},{title: 'Категории', count: '48'},{title: 'Статьи', count: '41'})
+                        +tags('Все разделы', {
+                            title: 'Системы увлажнения-охлаждения высокого давления',
+                            count: '32'
+                        },{
+                            title: 'Системы увлажнения',
+                            count: '17',
+                            submenu: [{
+                                title: 'Кормораздача',
+                                count: '11'
+                            },{
+                                title: 'Поилки',
+                                count: '32'
+                            },{
+                                title: 'Навозоудаление',
+                                count: '121'
+                            },{
+                                title: 'Дополнительное',
+                                count: '3'
+                            }]
+                        },{
+                            title: 'Кормораздача',
+                            count: '15'
+                        },{
+                            title: 'Поилки',
+                            count: '34'
+                        },{
+                            title: 'Навозоудаление',
+                            count: '33'
+                        },{
+                            title: 'Дополнительное',
+                            count: '3'
+                        })
+
+                        .sort
+                            .sort__base
+                                +submenu('submenu_resp_mob submenu_inner','Все товары', {title: 'Товары', count: '38'},{title: 'Категории', count: '48'},{title: 'Статьи', count: '41'})
+                            .sort__side
+                                .sort__select
+                                    .sort__item
+                                        .sort__title Сначала:
+                                        +select('','Новые','Популярные','Рейтинговые')
+                                    .sort__item
+                                        .sort__title На странице:
+                                        +select('5','10','20')
+                                .sort__view
+                                    .switcher
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-table" type="radio")
+                                            label.switcher__label(for="switcher-table")
+                                                span.switcher__icon.icon.icon_table
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_table")
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-row" type="radio")
+                                            label.switcher__label(for="switcher-row")
+                                                span.switcher__icon.icon.icon_row
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_row")
+
+                        .sep
+                            .sep__side
+
+                            .sep__base
+                                .grid.grid_view_row
+                                    +product('', {
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно',
+                                        parts: 'parts'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                        imgSize: '200x100',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        notexist: 'Запросить цену',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см',
+                                        price: '5 250',
+                                        delivery: 'Доставка на 8 ноября',
+                                    })
+                        +breadcrumbs('Главная', 'Информация')
+                        .top
+                            h1.top__title.title Блог
+                            +submenu('submenu_resp_mob','Все разделы',{title: 'Все'},{title:'Фермы КРС'},{title:'Свиноводство'},{title:'Птицеводство'},{title:'О компании'},{title:'Акции'})
+                        +blog('4', {
+                            modGrid: 'big',
+                            mod: 'main',
+                            picBig: 'picBig',
+                            title: 'БЕЛАГРО 2016 — участие'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'border',
+                            title: 'Инновационная технология доения от Milkrite',
+                            desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'border',
+                            title: 'Инновационная технология доения от Milkrite',
+                            desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'border',
+                            title: 'Инновационная технология доения от Milkrite',
+                            desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'sale',
+                            picBg: 'picBg',
+                            caption: 'Акция',
+                            title: 'Самозагрузочные обмотчики рулонов SCORPIO всего за 24 100a',
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        })
+                        ul.menu
+                            li.menu__item
+                                a.menu__link(href="#")
+                                    span.menu__grid
+                                        span.menu__side
+                                            span.menu__icon.icon.icon_31
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_31")
+                                        span.menu__base
+                                            span.menu__title Каталог
+                                .menu__desc Группа компаний ТОПИКС АГРО являет лидером рынка по ассортименту и наличию товара на складе для животноводства и птицеводства
+                            li.menu__item
+                                a.menu__link(href="#")
+                                    span.menu__grid
+                                        span.menu__side
+                                            span.menu__icon.icon.icon_32
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_32")
+                                        span.menu__base
+                                            span.menu__title Услуги
+                                .menu__desc Основные направления деятельности ГК Топикс Агро – внедрение новейших инновационных технологий для ведения сельского хозяйства от ведущих мировых производителей.
+                            li.menu__item
+                                a.menu__link(href="#")
+                                    span.menu__grid
+                                        span.menu__side
+                                            span.menu__icon.icon.icon_33
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_33")
+                                        span.menu__base
+                                            span.menu__title Партнерство
+                                .menu__desc Мы приветствуем новых партнеров способных предложить новые ассортиментные позиции или имеющих интересные ценовые предложения и нацеленных на долгосрочное сотрудничество.
+
+                        .tabs.js-tabs
+                            ul.tabs__nav
+                                li.tabs__item.tabs__item_active
+                                    a.tabs__link(href="#tab-1") Каталог товаров
+                                li.tabs__item
+                                    a.tabs__link(href="#tab-2") По направлению
+                            .tabs__container
+                                .tabs__box#tab-1
+                                    .tabs__text.content
+                                        p Мы готовы укомплектовать животноводческие комплексы оборудованием ведущих мировых и белорусских производителей.
+                                    .grid.grid_catalog
+                                        - var items = [ {title: 'Вентиляции', desc: 'Спирально-навивные, прямошовные', icons: [{icon: 'cow'}, {icon: 'pig'}, {icon: 'chicken'}]}, {title: 'Доильное оборудование Доильное оборудование', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Клеточное оборудование', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'chicken'}]}, {title: 'Комлектации', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Кормление', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}, {icon: 'pig'}, {icon: 'chicken'}]}, {title: 'Лабораторное оборудование', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Метизы, крепеж, трос, лебедки', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Моющие и дезинфицирующие средства', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Навозоудаление', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Освещение', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Отопление', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Охлаждение', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Перчатки, бахилы, накидки, фартуки', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Поение', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'},{icon: 'pig'},{icon: 'chicken'}]}, {title: 'Санитария', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные'}, {title: 'Содержание', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'chicken'}]}, {title: 'Техника', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'pig'}]}, {title: 'Уход за КРС', desc: 'Спирально-навивные, прямошовные, сварные и прямоугольные', icons: [{icon: 'cow'}]}, {title: 'Яйцесбор', desc: 'Спирально-навивные', icons: [{icon: 'chicken'}]} ]
+                                        each item in items
+                                            .grid__cell
+                                                .category.category_simple
+                                                    a.category__container(href="#")
+                                                        //img.category__img(src="../assets/index/images/markup/category_1.jpg" alt="")
+                                                        img.category__img(src="holder.js/354x315?theme=topic&auto=true" alt="")
+                                                        .category__layer
+                                                            .category__box
+                                                                if item.icons
+                                                                    .category__icons
+                                                                        each icon in item.icons
+                                                                            span.category__icon.icon(class="icon_" + icon.icon)
+                                                                                svg.icon__item
+                                                                                    use(xlink:href="#icon_" + icon.icon)
+                                                                .category__title=item.title
+                                                                .category__bottom
+                                                                    .category__desc=item.desc
+
+                                .tabs__box#tab-2
+                                    .grid.grid_direction
+                                        - var items = [ { title: 'Фермы КРС', icon: 'cow', menu: [{name: 'Системы увлажнения — охлаждения высокого давления', count: '32'}, {name: 'Системы увлажнения', count: '20'}, {name: 'Кормораздача ', count: '11'}, {name: 'Поилки', count: '23'}, {name: 'Навозоудаление', count: '121'}, {name: 'Кормораздача', count: '11'}, {name: 'Поилки', count: '21'}, {name: 'Птица', count: '43'}, {name: 'Кормораздача', count: '3'}, {name: 'Навозоудаление', count: '76'}] }, { title: 'Свиноводство', icon: 'pig', menu: [{name: 'Системы увлажнения — охлаждения высокого давления', count: '32'}, {name: 'Системы увлажнения', count: '20'}, {name: 'Кормораздача ', count: '11'}, {name: 'Поилки', count: '23'}, {name: 'Навозоудаление', count: '121'}, {name: 'Кормораздача', count: '11'}, {name: 'Поилки', count: '21'}, {name: 'Птица', count: '43'}, {name: 'Кормораздача', count: '3'}, {name: 'Навозоудаление', count: '76'}] },{ title: 'Птицеводство', icon: 'chicken', menu: [{name: 'Системы увлажнения — охлаждения высокого давления', count: '32'}, {name: 'Системы увлажнения', count: '20'}, {name: 'Кормораздача ', count: '11'}, {name: 'Поилки', count: '23'}, {name: 'Навозоудаление', count: '121'}, {name: 'Кормораздача', count: '11'}, {name: 'Поилки', count: '21'}, {name: 'Птица', count: '43'}, {name: 'Кормораздача', count: '3'}, {name: 'Навозоудаление', count: '76'}] } ]
+                                        each item in items
+                                            .grid__cell
+                                                .category.category_big
+                                                    a.category__container(href="#")
+                                                        //img.category__img(src="../assets/index/images/markup/category_1.jpg" alt="")
+                                                        img.category__img(src="holder.js/386x450?theme=topic&auto=true" alt="")
+                                                        .category__layer
+                                                            .category__box
+                                                                .category__icons
+                                                                    span.category__icon.icon(class="icon_" + item.icon)
+                                                                        svg.icon__item
+                                                                            use(xlink:href="#icon_" + item.icon)
+                                                                .category__title=item.title
+                                                    ul.category__menu
+                                                        each unit in item.menu
+                                                            li.category__item
+                                                                a.category__link(href="#")
+                                                                    span.category__text=unit.name
+                                                                    span.category__count=unit.count
+
+                        .layout.layout_wide
+                            .layout__side
+                                .layout__head
+                                    h3.layout__title Бренды
+                                    .layout__desc Мы готовы укомплектовать животноводческие комплексы оборудованием ведущих мировых и белорусских производителей.
+                            .layout__base
+                                +brands('Все производители', '10')
+                        hr.hr.hr_wide
+                        .layout.layout_wide
+                            .layout__side
+                                .layout__head.layout__head_underline
+                                    .layout__title Услуги
+                                    .layout__desc Основные направления деятельности нашей компании – внедрение новейших инновационных технологий для ведения сельского хозяйства от ведущих мировых производителей.
+                            .layout__base
+                                .grid.grid_services
+                                    - var items = [{title:'Проектирование животноводческих комплексов'},{title:'Монтажные работы любого оборудования'},{title:'Техническое обслуживание'},{title:'Сервисное обслуживание'}]
+                                    each item in items
+                                        .grid__cell
+                                            .service
+                                                a.service__link(href="#")
+                                                    //img.service__img-main(src="../assets/index/images/markup/service_1.jpg" alt="")
+                                                    img.service__img-main(src="holder.js/505x343?theme=topic&auto=true" alt="")
+                                                    img.service__img-hover(src="holder.js/505x343?theme=darken&auto=true" alt="")
+                                                    h3.service__caption=item.title
+                                                if item.desc
+                                                    .service__desc=item.desc
+                        .layout.layout_middle
+                            .layout__side
+                                .layout__head.layout__head_underline
+                                    .layout__top
+                                        .layout__title Наш блог
+                                        .layout__more-hidden
+                                            a.layout__ref.link(href="#")
+                                                span.link__icon.icon.icon_15
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_15")
+                                                span.link__text Другие новости
+                                    .layout__nav
+                                        ul.layout__list.list.list_big
+                                            li.list__item
+                                                a.list__link(href="#") Фермы КРС
+                                            li.list__item
+                                                a.list__link(href="#") Свиноводство
+                                            li.list__item
+                                                a.list__link(href="#") Птицеводство
+                                        ul.layout__list.list.list_big
+                                            li.list__item
+                                                a.list__link(href="#") О компании
+                                            li.list__item
+                                                a.list__link(href="#") Акции
+                                .layout__more
+                                    a.layout__ref.link(href="#")
+                                        span.link__icon.icon.icon_15
+                                            svg.icon__item
+                                                use(xlink:href="#icon_15")
+                                        span.link__text Другие новости
+                            .layout__base
+                                +blog('3', {
+                                    mod: 'sale',
+                                    picBg: 'picBg',
+                                    caption: 'Акция',
+                                    title: 'Самозагрузочные обмотчики рулонов SCORPIO всего за 24 100a',
+                                }, {
+                                    mod: 'card',
+                                    pic: 'pic',
+                                    title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                                }, {
+                                    mod: 'border',
+                                    title: 'Инновационная технология доения от Milkrite',
+                                    desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                                })
+                        .grid.grid_services
+                            - var items = [{title:'Проектирование животноводческих комплексов', desc:'Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления. От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования.'}, {title:'Монтажные работы любого оборудования',desc:'От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования.'},{title:'Техническое обслуживание', desc:'Группа Компаний «Топикс Агро» оказывает инжиниринговые услуги по проектированию объектов сельскохозяйственного назначения, а также предоставляет все необходимые сведения, позволяющие оценить перспективность проекта'},{title:'Сервисное обслуживание',desc:'От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования. Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления.'}]
+                            each item in items
+                                .grid__cell
+                                    .service
+                                        a.service__link(href="#")
+                                            //img.service__img-main(src="../assets/index/images/markup/service_1.jpg" alt="")
+                                            img.service__img-main(src="holder.js/595x404?theme=topic&auto=true" alt="")
+                                            img.service__img-hover(src="holder.js/595x404?theme=darken&auto=true" alt="")
+                                            h3.service__caption=item.title
+                                        if item.desc
+                                            .service__desc=item.desc
+
+                        hr.hr.hr_wide
+                    .advantages
+                        .advantages__box.box
+                            .advantages__side
+                                h2.advantages__title Группа компаний «Топикс агро»
+                            .advantages__base
+                                .advantages__row
+                                    ul.advantages__line
+                                        li.advantages__unit
+                                            .advantages__value 118 000
+                                            .advantages__desc номенклатурных позиций животноводческого оборудования
+                                        li.advantages__unit
+                                            .advantages__value 5000
+                                            .advantages__desc потребителей ежегодно становятся обладателями нашего оборудования
+                                        li.advantages__unit
+                                            .advantages__value 12
+                                            .advantages__desc лет безупречной работы на рынке животноводства
+                                .advantages__row
+                                    .advantages__text Мы занимается поставками и монтажом оборудования, для животноводства и птицеводства. Оказывает услуги в области разработки технологических решений для молочно-товарных комплексов, свиноферм и птицефабрик.
+                    .advantages
+                        .advantages__box.box
+                            .advantages__side
+                                h2.advantages__title Наши преимущества
+                            .advantages__base
+                                .advantages__grid
+                                    ul.advantages__list
+                                        li.advantages__item Дробеструйная обработка металла
+                                        li.advantages__item Раскрой листового металла на машинах газовой и плазменной резки
+                                        li.advantages__item Изготовление электросварной балки
+                                        li.advantages__item Раскрой проката
+                                        li.advantages__item Изготовление комплектующих
+                                        li.advantages__item Сборка и сварка металлоконструкций
+                                        li.advantages__item Дробеструйная обработка готовых изделий (II ступень)
+                                        li.advantages__item Покраска
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

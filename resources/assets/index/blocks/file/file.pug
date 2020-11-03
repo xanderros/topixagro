@@ -1,0 +1,11 @@
+mixin file(...items)
+    .file
+        .file__container
+            .file__upload
+                input.file__input(type="file")
+                .file__select
+                    span.file__clip-icon.icon.icon_clip
+                        svg.icon__item
+                            use(xlink:href="#icon_clip")
+                    .file__link Прикрепить файл
+            .file__note до 10 Мб

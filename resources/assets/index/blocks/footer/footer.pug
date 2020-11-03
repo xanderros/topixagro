@@ -1,0 +1,64 @@
+mixin footer
+    footer.footer
+        .footer__box.box
+            .footer__base
+                .footer__top
+                    .footer__logo
+                        a.logo.logo_footer(href="#")
+                    .footer__links
+                        .footer__cell
+                            .footer__caption
+                                a.footer__title(href="#") Услуги
+                            ul.footer__list
+                                li.footer__item
+                                    a.footer__link(href="#") Прайс-лист
+                                li.footer__item
+                                    a.footer__link(href="#") Каталог
+                                li.footer__item
+                                    a.footer__link(href="#") Доставка и оплата
+                        .footer__cell
+                            .footer__caption
+                                a.footer__title(href="#") О компании
+                            ul.footer__list
+                                li.footer__item
+                                    a.footer__link(href="#") Проекты
+                                li.footer__item
+                                    a.footer__link(href="#") Отзывы
+                                li.footer__item
+                                    a.footer__link(href="#") Партнерство
+                                li.footer__item
+                                    a.footer__link(href="#") Блог
+                .footer__copy
+                    | @ ГК «Топик Агро» оборудование для животноводства, 2004 — 2016.
+                    br
+                    | Все права защищены и охраняются законом
+            .footer__side
+                .footer__caption.footer__caption_bottom
+                    a.footer__title(href="#") Контакты
+                .footer__container
+                    .footer__row.footer__row_flex
+                        .footer__column
+                            .footer__line
+                                a.footer__phone(href="tel:74959256564") +7 (495) 925-65-64
+                            .footer__line
+                                a.footer__phone(href="tel:79203253235") +7 (920) 325-32-35
+                        .footer__btn
+                            a.btn.btn_type_light(href="#") Обратный звонок
+                    .footer__row
+                        .footer__heading
+                            span.footer__icon-fire.icon.icon_17
+                                svg.icon__item
+                                    use(xlink:href="#icon_17")
+                            | Горячая линия (бесплатно для РФ)
+                        .footer__line
+                            a.footer__phone(href="tel:88001111111") 8 800 111 11 11
+                    .footer__row.footer__row_bottom
+                        .footer__column
+                            a.footer__action(href="#")
+                                span.footer__icon-map.icon.icon_15
+                                    svg.icon__item
+                                        use(xlink:href="#icon_15")
+                                span.footer__text Адреса офисов
+                        .footer__social
+                            +social
+

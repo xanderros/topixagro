@@ -1,0 +1,9 @@
+mixin social
+    - var items = ["vkontakte", "facebook", "youtube"];
+    ul.social
+        for item in items
+            li.social__item
+                a(class="social__link social__link_" + item href="#")
+                    span(class="social__icon icon icon_" + item)
+                        svg.icon__item
+                            use(xlink:href="#icon_" + item)

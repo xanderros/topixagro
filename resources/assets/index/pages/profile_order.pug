@@ -1,0 +1,200 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Личный кабинет')
+                        .top
+                            h1.top__title.title Заказ №12434532
+                        .layout.layout_profile
+                            .layout__side
+                                .submenu.submenu_side.js-sub
+                                    .submenu__default
+                                        a.submenu__all.js-sub__btn(href="#") Заказы
+                                    ul.submenu__list.js-sub__content
+                                        li.submenu__item
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_profile
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_profile")
+                                                span.submenu__text Профиль
+                                        li.submenu__item.submenu__item_active
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_orders
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_orders")
+                                                span.submenu__text Заказы
+                                        li.submenu__item.submenu__item_last
+                                            a.submenu__link(href="#")
+                                                .submenu__icon
+                                                    span.icon.icon_exit
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_exit")
+                                                span.submenu__text Выход
+                                .aside.aside_desktop
+                                    a.aside__link(href="#")
+                                        img.aside__img(src="../assets/index/images/markup/aside_1.jpg" alt="")
+                            .layout__base
+                                .paginator.paginator_top
+                                    .paginator__back
+                                        a.paginator__btn.paginator__btn_prev(href="#")
+                                            span.paginator__icon.icon.icon_arrow-left
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_arrow-left")
+                                            span.paginator__mark Назад
+                                .basket.basket_orders.mb-large
+                                    .basket__table
+                                        .basket__box.basket__box_header
+                                            .basket__flex Наименование
+                                            .basket__content
+                                                .basket__counters
+                                                    .basket__cell.basket__cell_price
+                                                        | Цена<br> без НДС
+                                                    .basket__cell.basket__cell_count Кол-во
+                                                    .basket__cell.basket__cell_summ
+                                                        | Сумма<br> без НДС
+                                                .basket__prices
+                                                    .basket__cell.basket__cell_full-summ Итого
+                                                    .basket__cell.basket__cell_vat НДС
+                                                    .basket__cell.basket__cell_result К оплате
+                                        .basket__box.basket__box_content
+                                            .basket__item
+                                                .basket__flex
+                                                    .basket__product
+                                                        a.basket__figure(href="#")
+                                                            img.basket__img(src="../assets/index/images/layout/placeholder.svg" alt="")
+                                                        .basket__wrap
+                                                            .basket__title
+                                                                a.link-dark(href="#")
+                                                                    span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                            .basket__code Артикул: H50515010
+                                                .basket__content
+                                                    .basket__counters
+                                                        .basket__cell.basket__cell_price 260 000 р.
+                                                        .basket__cell.basket__cell_count
+                                                            | <span class="basket__mark">x</span>21 <span class="basket__light">шт</span>
+                                                        .basket__cell.basket__cell_summ
+                                                            | <span class="basket__mark">=</span>1 260 000 р.
+                                                    .basket__prices
+                                                        .basket__cell.basket__cell_full-summ
+                                                            .basket__cap Итого:
+                                                            span.basket__val 1 260 000 р.
+                                                        .basket__cell.basket__cell_vat
+                                                            .basket__cap НДС:
+                                                            span.basket__val 102 000 р.
+                                                        .basket__cell.basket__cell_result
+                                                            .basket__cap К оплате:
+                                                            span.basket__val
+                                                                | <span class="basket__strong">1 272 000</span> р.
+                                            .basket__item
+                                                .basket__flex
+                                                    .basket__product
+                                                        a.basket__figure(href="#")
+                                                            img.basket__img(src="../assets/index/images/markup/product_6.jpg" alt="")
+                                                        .basket__wrap
+                                                            .basket__title
+                                                                a.link-dark(href="#")
+                                                                    span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                            .basket__code Артикул: H50515010
+                                                .basket__content
+                                                    .basket__counters
+                                                        .basket__cell.basket__cell_price 60 000 р.
+                                                        .basket__cell.basket__cell_count
+                                                            | <span class="basket__mark">x</span>1 <span class="basket__light">шт</span>
+                                                        .basket__cell.basket__cell_summ
+                                                            | <span class="basket__mark">=</span>60 000 р.
+                                                    .basket__prices
+                                                        .basket__cell.basket__cell_full-summ
+                                                            .basket__cap Итого:
+                                                            span.basket__val 60 000 р.
+                                                        .basket__cell.basket__cell_vat
+                                                            .basket__cap НДС:
+                                                            span.basket__val 12 000 р.
+                                                        .basket__cell.basket__cell_result
+                                                            .basket__cap К оплате:
+                                                            span.basket__val
+                                                                | <span class="basket__strong">72 000</span> р.
+                                    .basket__bottom
+                                        .basket__info
+                                            .basket__act
+                                                .basket__caption Статус:
+                                                .state
+                                                    span.state__icon
+                                                        .icon.icon_pay
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_pay")
+                                                    .state__text Оплата
+                                            .basket__download
+                                                a.download(href="#")
+                                                    span.download__icon.icon.icon_download
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_download")
+                                                    .download__link(href="#")
+                                                        span.download__text Скачать счет
+                                        .basket__result
+                                            | Всего: <span class="basket__totals">149 475</span> р.
+
+                                .subtitle Способы доставки
+                                .content.mb-large
+                                    p При общей стоимости Заказа более 10 000 рублей доставка до терминала транспортной компании 		по Москве и Московской области в пределах А107 (ММК — Московское малое кольцо осуществляется бесплатно.
+                                .subtitle Персональный менеджер компании и контакты
+                                .grid.grid_cards.mb-xlarge
+                                    .grid__cell
+                                        .wall.wall_light
+                                            .card.card_simple
+                                                figure.card__figure
+                                                    img.card__img(src="../assets/index/images/markup/card_1.jpg" alt="")
+                                                    //img.card__img(src="holder.js/100x100?theme=topic&auto=true" alt="")
+                                                .card__box
+                                                    .card__title Константин Забнин
+                                                    .card__info Менеджер по направлению
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                                    .wall__row.wall__row_mid
+                                                        a.wall__link.link-dark(href="mailto:cc@topixagro.com")
+                                                            span.link-dark__text cc@topixagro.com
+                                                    .wall__line
+                                                        a.btn.btn_type_bright.btn_size_wide(href="#") Написать
+                                                    .wall__line
+                                                        a.wall__link.link-dark(href="skype:topixagro?chat")
+                                                            span.link-dark__text Написать в скайп
+                                    .grid__cell
+                                        .wall.wall_light.wall_mid
+                                            .wall__info
+                                                .wall__caption Консультация по доставке
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Возврат товара
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Техническая поддержка
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Бухгалтерия
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+                                            .wall__info
+                                                .wall__caption Юридический отдел
+                                                .wall__row
+                                                    a.wall__tel(href="tel:+375175102390") +37517 510-23-90
+
+
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

@@ -1,0 +1,6 @@
+mixin breadcrumbs(...items)
+    ul.breadcrumbs
+        each item in items
+            li.breadcrumbs__item
+                a.breadcrumbs__link(href="#")
+                    span.breadcrumbs__text= item

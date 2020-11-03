@@ -1,0 +1,126 @@
+.file {
+	position: relative;
+
+	&:hover {
+		.hint {
+			opacity: 1;
+			transform: translate3d(0,0,0);
+			pointer-events: auto;
+		}
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+	&__note {
+		color: @textGrey;
+		font-size: 16px;
+		line-height: 1.2;
+		margin-bottom: 4px;
+	}
+	&__notice {
+		margin-top: 5px;
+		color: @textGrey;
+		font-size: 14px;
+		line-height: 1.2;
+	}
+	&__list {
+		margin-top: 8px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item {
+		display: inline-block;
+		margin-top: 9px;
+		margin-right: 11px;
+		padding-right: 18px;
+		position: relative;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__del {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		right: -2px;
+		top: -1px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+	}
+	&__upload {
+		padding: 12px 0;
+		position: relative;
+		width: 184px;
+		overflow: hidden;
+	}
+	&__input {
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 184px;
+		opacity: 0;
+		font-size: 150px;
+		height: 39px;
+		z-index: 20;
+		cursor: pointer;
+
+		&:hover + .file__select .file__link {
+			color: @green;
+			border-bottom-color: transparent;
+		}
+	}
+	&__select {
+		display: flex;
+	}
+	&__link {
+		padding-top: 2px;
+		font-size: 16px;
+		white-space: nowrap;
+		color: @linkColor;
+		border-bottom: 1px dashed #afd1e9;
+	}
+	&__clip-icon {
+		margin-right: 10px;
+	}
+	&__loader {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity .3s ease;
+	}
+	&_loading {
+		.file {
+			&__loader {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	&_small {
+		.file {
+			&__clip-icon {
+				&.icon_clip {
+					width: 23px;
+					height: 21px;
+				}
+			}
+			&__info {
+				margin-top: -9px;
+				padding-left: 32px;
+			}
+		}
+		.form__error-message {
+			font-size: 14px;
+		}
+	}
+}

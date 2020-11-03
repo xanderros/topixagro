@@ -1,0 +1,267 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                        .top
+                            h1.top__title.title Корзина
+                        .basket
+                            .basket__table
+                                .basket__box.basket__box_header
+                                    .basket__base Наименование
+                                    .basket__side
+                                        .basket__counter Количество
+                                        .basket__information
+                                            .basket__period Срок поставки
+                                            .basket__price Стоимость
+                                        .basket__del
+                                .basket__box.basket__box_content
+                                    .basket__item
+                                        .basket__base
+                                            .basket__product
+                                                a.basket__figure(href="#")
+                                                    img.basket__img(src="../assets/index/images/markup/product_7.jpg" alt="")
+                                                    //img.basket__img-hover(src="holder.js/98x98?theme=darken&auto=true" alt="")
+                                                .basket__wrap
+                                                    .basket__title
+                                                        a.link-dark(href="#")
+                                                            span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                    .basket__code Артикул: H50515010
+                                        .basket__side
+                                            .basket__counter
+                                                .counter
+                                                    .counter__btn.counter__btn_minus
+                                                        span.counter__icon.icon.icon_minus
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_minus")
+                                                    .counter__result
+                                                        input.counter__number(type="tel" value="2" readonly="readonly")
+                                                        .counter__unit шт
+                                                    .counter__btn.counter__btn_plus
+                                                        span.counter__icon.icon.icon_plus
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_plus")
+                                            .basket__information
+                                                .basket__period 15 дней
+                                                .basket__price
+                                                    //.basket__value Цена по запросу
+                                                    .basket__cost
+                                                        | 168 475
+                                                        span.basket__unit.icon.icon_ruble
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_ruble")
+                                            .basket__del
+                                                a.basket__del-btn(href="#")
+                                                    span.basket__unit.icon.icon_close
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_close")
+                                    .basket__item
+                                        .basket__base
+                                            .basket__product
+                                                a.basket__figure(href="#")
+                                                    img.basket__img(src="../assets/index/images/markup/product_6.jpg" alt="")
+                                                    //img.basket__img-hover(src="holder.js/98x98?theme=darken&auto=true" alt="")
+                                                .basket__wrap
+                                                    .basket__title
+                                                        a.link-dark(href="#")
+                                                            span.link-dark__text Приточная установка  100-50 (R)
+                                                    .basket__code Артикул: H50515010
+                                        .basket__side
+                                            .basket__counter
+                                                .counter
+                                                    .counter__btn.counter__btn_minus
+                                                        span.counter__icon.icon.icon_minus
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_minus")
+                                                    .counter__result
+                                                        input.counter__number(type="tel" value="22" readonly="readonly")
+                                                        .counter__unit шт
+                                                    .counter__btn.counter__btn_plus
+                                                        span.counter__icon.icon.icon_plus
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_plus")
+                                            .basket__information
+                                                .basket__period 7 дней
+                                                .basket__price
+                                                    .basket__value Цена по запросу
+                                            .basket__del
+                                                a.basket__del-btn(href="#")
+                                                    span.basket__unit.icon.icon_close
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_close")
+                                    .basket__item
+                                        .basket__base
+                                            .basket__product
+                                                a.basket__figure(href="#")
+                                                    img.basket__img(src="../assets/index/images/markup/product_8.jpg" alt="")
+                                                    //img.basket__img-hover(src="holder.js/98x98?theme=darken&auto=true" alt="")
+                                                .basket__wrap
+                                                    .basket__title
+                                                        a.link-dark(href="#")
+                                                            span.link-dark__text Приточная установка Titan EC (VN.3/FO.3) 100-50 (R)
+                                                    .basket__code Артикул: H50515010
+                                        .basket__side
+                                            .basket__counter
+                                                .counter
+                                                    .counter__btn.counter__btn_minus
+                                                        span.counter__icon.icon.icon_minus
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_minus")
+                                                    .counter__result
+                                                        input.counter__number(type="tel" value="2" readonly="readonly")
+                                                        .counter__unit шт
+                                                    .counter__btn.counter__btn_plus
+                                                        span.counter__icon.icon.icon_plus
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_plus")
+                                            .basket__information
+                                                .basket__period 11 дней
+                                                .basket__price
+                                                    .basket__cost
+                                                        | 7 200
+                                                        span.basket__unit.icon.icon_ruble
+                                                            svg.icon__item
+                                                                use(xlink:href="#icon_ruble")
+                                            .basket__del
+                                                a.basket__del-btn(href="#")
+                                                    span.basket__unit.icon.icon_close
+                                                        svg.icon__item
+                                                            use(xlink:href="#icon_close")
+                            .basket__bottom
+                                .basket__info
+                                    .basket__note
+                                        span.basket__link-icon
+                                            span.icon.icon_percent
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_percent")
+                                        a.basket__link(href="#")
+                                            span.basket__text Условия предоставления скидок
+                                .basket__result
+                                    .basket__row
+                                        .basket__th Всего:
+                                        .basket__td
+                                            | 149 475
+                                            span.basket__unit.icon.icon_ruble
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_ruble")
+                                    .basket__row
+                                        .basket__th Скидка:
+                                        .basket__td
+                                            | 25 000
+                                            span.basket__unit.icon.icon_ruble
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_ruble")
+                                    .basket__row.basket__row_summ
+                                        .basket__th ИТОГО:
+                                        .basket__td
+                                            | 124 475
+                                            span.basket__unit.icon.icon_ruble
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_ruble")
+                        .note.mb-big
+                            .content
+                                p В вашей корзине есть товары с ценой. Вы можете получить на них счет прямо с сайта. Ваша заявка попадет к нам в систему, и в течение 10 минут с вами свяжется менеджер корпорации, чтобы уточнить подробности заказа.
+                                p
+                                    | <strong>Обратите внимание:</strong> для крупных оптовых партий действуют скидки в зависимости от объема покупки. Вы можете подробно ознакомиться со скидками, нажав на соответствующую кнопку.
+                        form.form.mb-big
+                            .flex.flex_form
+                                .flex__cell
+                                    .form__title Данные покупателя
+                                    .form__row.form__required
+                                        label.form__label ФИО контактного лица (обязательно)
+                                        .form__control
+                                            input.form__input(type="text")
+                                            .form__error-message Необходимо указать ваши фамилию, имя и отчество
+                                    .form__row.form__required
+                                        label.form__label Электронная почта (обязательно)
+                                        .form__control
+                                            input.form__input(type="email")
+                                            .form__error-message Необходимо указать адрес электронной почты
+                                    .form__row.form__required.form__error
+                                        label.form__label Номер телефона (обязательно)
+                                        .form__control
+                                            input.form__input(type="tel")
+                                            .form__error-message Необходимо ввести телефон
+                                    .form__row
+                                        label.form__label Компания
+                                        .form__control
+                                            input.form__input(type="text")
+                                    .form__row.form__required
+                                        label.form__label ИНН (обязательно)
+                                        .form__control
+                                            input.form__input(type="text")
+                                            .form__error-message Необходимо ввести ИНН
+                                .flex__cell
+                                    .form__title Адрес доставки
+                                    .form__row.form__required
+                                        .form__grid.form__grid_field
+                                            .form__cell
+                                                label.form__label Регион (обязательно)
+                                                .form__control
+                                                    select.form__select
+                                                        option.form__option Выбрать
+                                                        option.form__option ЦАО
+                                            .form__cell
+                                                label.form__label Город (обязательно)
+                                                .form__control
+                                                    select.form__select
+                                                        option.form__option Москва
+                                                        option.form__option Сургут
+                                                        option.form__option Екатеринбург
+                                        .form__error-message Необходимо выбрать город
+                                    .form__row
+                                        +radio('form__item', 'delivery', 'Доставка до транспортной компании')
+                                    .form__row.form__required
+                                        .form__grid.form__grid_field
+                                            .form__cell.form__cell_street
+                                                label.form__label Адрес (обязательно)
+                                                .form__control
+                                                    input.form__input(type="text" placeholder="Улица")
+                                            .form__cell.form__cell_house
+                                                .form__control
+                                                    input.form__input(type="text" placeholder="Дом")
+                                            .form__cell.form__cell_block
+                                                .form__control
+                                                    input.form__input(type="text" placeholder="Корпус")
+                                            .form__cell.form__cell_office
+                                                .form__control
+                                                    input.form__input(type="text" placeholder="Офис")
+                                        .form__error-message Необходимо указать адрес
+                                    .form__row
+                                        label.form__label Дополнительная информация к заказу
+                                        .form__control
+                                            textarea.form__textarea(rows="6")
+                            .form__note После оформления заявки на электронную почту будет выслан счёт для оплаты заказа
+                            .cover.cover_dark
+                                .cover__base
+                                    +file('файл-1.jpg','файл-2.jpg')
+                                .cover__side
+                                    button(type="submit").btn.btn_type_bright Отправить заявку
+
+
+                        h2.subtitle Самовывоз
+                        .content.mb-xlarge
+                            p Вы можете самостоятельно забрать приобретённое оборудование с нашего склада в рабочее время,если это вам удобно.
+                            table
+                                tr
+                                    th Время работы склада:
+                                    td
+                                        | Понедельник — Четверг<br>c 9:00 до 18:00
+                                    td
+                                        | Пятница<br>с 9:00 до 17:00
+                            p Всю информацию о доставке Вы можете посмотреть в разделе <a href="#">доставка</a>.
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

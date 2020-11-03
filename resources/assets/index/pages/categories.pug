@@ -1,0 +1,470 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                        .top.top_nav
+                            h1.top__title.title Каталог
+                            .top__nav
+                                +submenu('submenu_resp_mob','Весь каталог',{title: 'Весь каталог'},{title: 'Популярные'},{title: 'Новинки'},{title: 'Скидки'},{title: 'Производители'})
+                        .flex.flex_cat.mb-big
+                            mixin cat(...items)
+                                ul.cat
+                                    each item in items
+                                        li.cat__item
+                                            a.cat__link(href="#")
+                                                span.cat__text=item.title
+                                                span.cat__count=item.count
+                            .flex__cell
+                                .pic
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_cow")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_cow")
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_pig")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_pig")
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_chicken")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_chicken")
+                                .subtitle Вентиляции
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_cow")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_cow")
+                                .subtitle Доильное оборудование
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_chicken")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_chicken")
+                                .subtitle Клеточное оборудование
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_cow")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_cow")
+                                .subtitle Комплектации
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_cow")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_cow")
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_pig")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_pig")
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_chicken")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_chicken")
+                                .subtitle Кормление
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                .subtitle Лабораторное оборудование
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                .subtitle Метизы, крепеж, трос, лебедки
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                .subtitle Моющие и дезинфицирующиесредства
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_cow")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_cow")
+                                .subtitle Навозоудаление
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                .subtitle Освещение
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                            .flex__cell
+                                .pic
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_pig")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_pig")
+                                    .pic__item
+                                        span.pic__icon.icon(class="icon_chicken")
+                                            svg.icon__item
+                                                use(xlink:href="#icon_chicken")
+                                .subtitle Отопление
+                                +cat({
+                                    title: 'Системы увлажнения — охлаждения высокого давления',
+                                    count: '11'
+                                }, {
+                                    title: 'Системы увлажнения',
+                                    count: '50'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '7'
+                                }, {
+                                    title: 'Поилки',
+                                    count: '32'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '3'
+                                }, {
+                                    title: 'Кормораздача',
+                                    count: '32'
+                                }, {
+                                    title: 'Птица',
+                                    count: '32'
+                                }, {
+                                    title: 'Навозоудаление',
+                                    count: '121'
+                                }, {
+                                    title: 'Дополнительное',
+                                    count: '3'
+                                })
+                        hr.hr.hr_wide.hr_bottom
+                        .layout.layout_big.mb-big
+                            .layout__side
+                                .layout__title Животноводческое оборудование ГК «Топикс Агро»
+                            .layout__base.covering
+                                .content
+                                    p Группа Компаний «Топикс Агро» – занимается разработкой технологических решений, поставкой и монтажом оборудования для животноводства.
+                                    p Основные направления деятельности нашей компании – внедрение новейших инновационных технологий для ведения сельского хозяйства от ведущих мировых производителей. Кроме того, Топикс Агро стала компанией, производящей высококачественные, надежные товары и технические системы для молочного и зоотехнического оборудования.
+                                    p Специалисты нашего предприятия постоянно посещают международные выставки и проводят мониторинг новых достижений в производстве сельхозоборудования и ведения сельского хозяйства, выбирая своими партнерами и поставщиками только ведущих производителей.
+                                    p Стабильность, огромное количество товара на складе, квалифицированная техническая поддержка, наличие выездных бригад и гарантийного (сервисного) обслуживания – все это позволило нам привлечь и с каждым днем увеличивать число наших постоянных партнеров и клиентов.
+                                .covering__row
+                                    a.more.more_big(href="#")
+                                        span.more__text Подробнее
+                                        span.more__icon.icon.icon_arrow-right
+                                            svg.icon__item
+                                                use(xlink:href="#icon_arrow-right")
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

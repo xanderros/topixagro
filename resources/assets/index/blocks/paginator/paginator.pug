@@ -1,0 +1,26 @@
+mixin paginator(mod)
+    .paginator(class="paginator_" + mod)
+        a.paginator__btn.paginator__btn_prev(href="#")
+            span.paginator__icon.icon.icon_arrow-left
+                svg.icon__item
+                    use(xlink:href="#icon_arrow-left")
+            span.paginator__mark Назад
+        .paginator__list
+            a.paginator__link(href="#")
+                span.paginator__text 1
+            a.paginator__link.paginator__link_active(href="#")
+                span.paginator__text 2
+            a.paginator__link(href="#")
+                span.paginator__text 3
+            a.paginator__link(href="#")
+                span.paginator__text 4
+            a.paginator__link(href="#")
+                span.paginator__text 5
+            span.paginator__dots ...
+            a.paginator__link(href="#")
+                span.paginator__text 17
+        a.paginator__btn.paginator__btn_next(href="#")
+            span.paginator__mark Дальше
+            span.paginator__icon.icon.icon_arrow-right
+                svg.icon__item
+                    use(xlink:href="#icon_arrow-right")

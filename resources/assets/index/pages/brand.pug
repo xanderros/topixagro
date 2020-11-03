@@ -1,0 +1,232 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная','Производители')
+                        article.article
+                            .top
+                                h1.top__title.title Ikadan
+                            .layout.layout_wide.mb-large
+                                .layout__side
+                                    .layout__back
+                                        a.more(href="#")
+                                            span.more__icon.icon.icon_arrow-left
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_arrow-left")
+                                            span.more__text Вернуться к списку
+                                    .layout__picture
+                                        img.layout__img(src="../assets/index/images/markup/brand_ikadan.jpg" alt="")
+                                .layout__base
+                                    .content.mb-big
+                                        p Ikadan System является поставщиком новаторских решений из пластмассы для содержания домашних животных.
+                                        p На протяжении 20 лет мы с успехом разрабатываeм и усовершенствуем модульную систему пола из пластмассовых решёток для оснащения свинокомплексов.
+                                        p Система решётчатых полов фирмы Ikadan продаётся сегодня более чем в 30 стран мира.
+                                        p Новаторство и усовершенствование продукции – вот, что движет нами и сопутствует нашему успеху в оснащении современных комплексов пластмассой.
+                                        p Среди прочего мы получаем вдохновение для наших открытий через тесный диалог с покупателем. Эта информация комбинированная со знанием  возможностей пластмассы используется нами как в усовершенствовании уже существующих продуктов так и в разработке новых . Среди преимуществ использования пластмассы можно назвать такие как: лёгкость монтажа и уборки, противостояние воздейсвию агрессивной среды в свинарнике.
+                                        p Несколько лет назад Ikadan System начал производить модульную систему панелей Мultiflex, почти все компоненты которой, включая крепеж, выполнены из стойкой пластмассы.
+                                        p Производство происходит в Дании.  В то время как другие фирмы вывозят производство в страны с низким уровнем оплаты труда, наша фирма производит полную автоматизацию производства. Это позволяет нам совершенствоваться и быстро перестраивать производство.
+                                        p Производя наши товары в Дании, мы можем удовлетворить каждого покупателя.
+                                        p Производство осуществляется роботами, что делает цены конкурентноспособными.
+                                    .subtitle.mb-sm Файлы
+                                    ul.layout__list.list.list_content
+                                        li.list__item
+                                            a.list__link(href="#") Скачать инструкцию для McCULLOCH M95-66X
+                                            span.list__mark (19 Mb, pdf)
+                                        li.list__item
+                                            a.list__link(href="#") Скачать инструкцию для воздуханагревателя LOCH M95-66X
+                                            span.list__mark (37 Mb, pdf)
+                                        li.list__item
+                                            a.list__link(href="#") Скачать инструкцию для Kawasaki McCULLOCH M95-66X
+                                            span.list__mark (85 Mb, pdf)
+
+                        h2.heading Товары производителя в каталоге
+                        +tags('Все разделы', {
+                            title: 'Системы увлажнения-охлаждения высокого давления',
+                            count: '32'
+                        },{
+                            title: 'Системы увлажнения',
+                            count: '17',
+                            submenu: [{
+                                title: 'Кормораздача',
+                                count: '11'
+                            }, {
+                                title: 'Поилки',
+                                count: '32'
+                            }, {
+                                title: 'Навозоудаление',
+                                count: '121'
+                            }, {
+                                title: 'Дополнительное',
+                                count: '3'
+                            }]
+                        },{
+                            title: 'Кормораздача',
+                            count: '15'
+                        },{
+                            title: 'Поилки',
+                            count: '34'
+                        })
+                        .sort.sort_simple
+                            .sort__base
+                                .sort__select
+                                    .sort__item
+                                        .sort__title Сначала:
+                                        +select('','Новые','Популярные','Рейтинговые','Дешевые')
+                            .sort__side
+                                .sort__select
+                                    .sort__item
+                                        .sort__title На странице:
+                                        +select('','16','32')
+                                .sort__view
+                                    .switcher
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-table" type="radio")
+                                            label.switcher__label(for="switcher-table")
+                                                span.switcher__icon.icon.icon_table
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_table")
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-row" type="radio")
+                                            label.switcher__label(for="switcher-row")
+                                                span.switcher__icon.icon.icon_row
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_row")
+
+                        .grid.grid_view_row
+                            +product('', {
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно',
+                                parts: 'parts',
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                imgSize: '200x100',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                notexist: 'Запросить цену',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см',
+                                price: '5 250',
+                                delivery: 'Доставка на 8 ноября',
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                notexist: 'Запросить цену',
+                                delivery: 'Доставка на 8 ноября',
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            },{
+                                title: 'Газовый воздухонагреватель ERMAF P120',
+                                imgSize: '240x150',
+                                category1: 'Навозоудаление',
+                                category2: 'Топик Агро',
+                                code: 'Артикул: H50515010',
+                                desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                price: '68 188',
+                                delivery: 'Доставка на 8 ноября',
+                                exist: 'На складе достаточно'
+                            })
+
+                        +paginator('border')
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

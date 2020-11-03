@@ -1,0 +1,49 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная', 'Проекты')
+                    article.article
+                        .box
+                            .top
+                                h1.top__title.title СХП «Авангард» — миксера и насосы для лагун
+                            .layout.layout_text.mb-large
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__subtitle Задача
+                                .layout__base
+                                    .content
+                                        p
+                                            | <strong>Процесс монтажа приобретенной заказчиком системы вентиляции не менее важен, чем процесс ее проектирования и изготовления. От качества монтажных работ напрямую зависит правильность функционирования всего комплекса оборудования.</strong>
+                                        p Если контроль действий монтажников производится изготовителем системы, это позволяет «на ходу» корректировать работу и устранять некоторые возможные ошибки. Приведем несколько примеров проблем, с которыми может столкнуться персонал, монтирующий вентиляционную систему.
+                            .layout.layout_text.mb-xlarge
+                                .layout__side
+                                    .layout__head.layout__head_underline
+                                        h2.layout__subtitle Решение
+                                .layout__base
+                                    .content
+                                        p Замеры помещения и толщины перекрытий, проведенные при разработке проекта, могут оказаться неточными — особенно часто это встречается при проектировании параллельно с ремонтом или строительством здания. В этом случае может понадобиться нарастить или укоротить воздуховоды, установить не предусмотренные проектом элементы — а это может повлечь необходимость изменения некоторых параметров работы оборудования.
+                                        .content-gallery
+                                            .content-gallery__grid
+                                                - var number = 1;
+                                                while number < 9
+                                                    - var count = number++
+                                                    .content-gallery__cell
+                                                        a.content-gallery__link(href="../assets/index/images/markup/gallery_1.jpg")
+                                                            img.content-gallery__img(src="../assets/index/images/markup/gallery_1.jpg" alt="" width="166" height="166")
+                                        p Замеры помещения и толщины перекрытий, проведенные при разработке проекта, могут оказаться неточными — особенно часто это встречается при проектировании параллельно с ремонтом или строительством здания. В этом случае может понадобиться нарастить или укоротить воздуховоды, установить не предусмотренные проектом элементы — а это может повлечь необходимость изменения некоторых параметров работы оборудования.
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

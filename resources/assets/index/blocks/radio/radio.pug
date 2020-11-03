@@ -1,0 +1,7 @@
+mixin radio(mix, title, ...items)
+    - var number = 1;
+    each item in items
+        -var count = number++
+        .radio(class=mix)
+            input.radio__input(type="radio" id="radio_" + title + "_" + count  name="radio_" + title)
+            label.radio__label(for="radio_" + title + "_" + count)= item

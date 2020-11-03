@@ -1,0 +1,34 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                        .top
+                            h1.top__title.title Производители
+                        .grid.grid_tile.mb-xlarge
+                            - var number = 1;
+                            - var items = ['Lely','Lubing','Biemmedue S.p.A.','Lely','Lubing','Biemmedue S.p.A.','Lely','Lubing','Biemmedue S.p.A.','Lely','Lubing','Biemmedue S.p.A.','Lely','Lubing','Biemmedue S.p.A.','Lely','Lubing','Biemmedue S.p.A.','Lely','Lubing']
+                            each item in items
+                                - var count = number++
+                                .grid__cell
+                                    a.tile(href="#")
+                                        span.tile__figure
+                                            img.tile__img(src="../assets/index/images/markup/brand_" + count + ".jpg" alt="")
+                                            //img.tile__img(src="holder.js/180x170?theme=topic&auto=true" alt="")
+                                        .tile__bottom
+                                            span.tile__text=item
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

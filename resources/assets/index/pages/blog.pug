@@ -1,0 +1,88 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная', 'Информация')
+                        .top.top_nav
+                            h1.top__title.title Блог
+                            .top__nav
+                                +submenu('submenu_resp_mob','Все разделы',{title: 'Все'},{title: 'Фермы КРС'},{title: 'Свиноводство'},{title: 'Птицеводство'},{title: 'О компании'},{title: 'Акции'})
+                        +blog('4', {
+                            modGrid: 'big',
+                            mod: 'main',
+                            picBig: 'picBig',
+                            title: 'БЕЛАГРО 2016 — участие'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'border',
+                            title: 'Инновационная технология доения от Milkrite',
+                            desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'border',
+                            title: 'Инновационная технология доения от Milkrite',
+                            desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'border',
+                            title: 'Инновационная технология доения от Milkrite',
+                            desc: 'Самый прогрессивный шаг в технологии доения за последнее поколение. Мы предлагаем абсолютно новый продукт треугольную сосковую резину…'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        }, {
+                            mod: 'sale',
+                            picBg: 'picBg',
+                            caption: 'Акция',
+                            title: 'Самозагрузочные обмотчики рулонов SCORPIO всего за 24 100a',
+                        }, {
+                            mod: 'card',
+                            pic: 'pic',
+                            title: 'БЕЛАГРО 2016 — участие компании Топикс Агро'
+                        })
+                        +paginator('border')
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

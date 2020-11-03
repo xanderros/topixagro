@@ -1,0 +1,163 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                        .top
+                            h1.top__title.title Отзывы клиентов
+
+                        .review
+                            article.review__item
+                                .review__side
+                                    .review__top
+                                        .review__author Олег Аско
+                                        .review__info Генеральный директор ООО «Фабрика-Инвест»
+                                        time.review__date(datetime="2016-11-29") 29 ноября 2016 г.
+                                    .review__pic
+                                        a.review__link(href="../assets/index/images/markup/certificate_5.jpg")
+                                            img.review__img(src="../assets/index/images/markup/certificate_5.jpg" alt="" width="100" height="136")
+                                            //img.review__img-hover(src="holder.js/98x98?theme=darken&auto=true" alt="")
+                                .review__base
+                                    .review__rating
+                                        .rating
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+
+                                    .review__content.content
+                                        p Хочу выразить огромную благодарность врачу-эндокринологу амбулаторного отделения 2 ГДКБ Павлычевой Екатерине Святославовне! Сын состоит на учете с диагнозом субклинический гипотиреоз, АИТ?, задержка пубертата. Ведет нас другой доктор, но по причине ее отпуска попали на прием к Екатерине Святославовне. Очень деликатная, внимательная, тактичная. Мои сомнения и вопросы грамотно и спокойно аргументировала и разъясняла. Но самое главное - она нашла нужные слова, вселила в сына уверенность, что всё есть и будет хорошо (ведь понятно, какие страдания 14-летнему подростку доставляют мысли о том, что с его развитием что-то не так). Сын просто воспрял духом, поэтому я и пишу этот отзыв. Чтобы сказать, что врач - это не только профессионал, но и Человек! Екатерина Святославовна - врач на своем месте.
+
+                            article.review__item
+                                .review__side
+                                    .review__top
+                                        .review__author Виталий Яловский
+                                        .review__info Генеральный директор ООО «Фабрика-Инвест»
+                                        time.review__date(datetime="2016-11-29") 29 ноября 2016 г.
+                                    .review__pic
+                                        a.review__link(href="../assets/index/images/markup/certificate_2.jpg")
+                                            img.review__img(src="../assets/index/images/markup/certificate_2.jpg" alt="" width="100" height="136")
+                                            //img.review__img-hover(src="holder.js/98x98?theme=darken&auto=true" alt="")
+                                .review__base
+                                    .review__rating
+                                        .rating
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                    .review__content.content
+                                        p Хотелось бы поделиться впечатлением о поездке в Закопане на Рождество. В первую очередь впечатлила красота природы, с приятными и незабываемыми ощущениями посетили термобаню Что касается организации и условий проживания,то хотелось бы отметить старания всех участников этого организационного процесса: сопровождающей Кристины,хозяйки дома и водителей,которые не смотря на все нюансы,возникшие в процессе поездки,все же решались в пользу туристов. Хочу не согласиться с предыдущим комментарием: сопровождающий это не гид. Девушка отвечала на все вопросы и инструктировала и даже выступала в качестве переводчик,возможно, не на свободном польском,но по возможности.Отдельное спасибо за вкусную кухню. По вопросу жилья пожелала бы немного доработать. Были претензии к постели,отоплению и полотенцам ,не было стаканчиков,мыла.Спасибо водителям,за то что довезли всех живыми и здоровыми,а время это всего лишь время.
+                            article.review__item
+                                .review__side
+                                    .review__top
+                                        .review__author Елена Панина
+                                        .review__info Генеральный директор ООО «Фабрика-Инвест»
+                                        time.review__date(datetime="2016-11-29") 29 ноября 2016 г.
+                                    .review__pic
+                                        a.review__link(href="../assets/index/images/markup/certificate_7.jpg")
+                                            img.review__img(src="../assets/index/images/markup/certificate_7.jpg" alt="" width="100" height="136")
+                                            //img.review__img-hover(src="holder.js/98x98?theme=darken&auto=true" alt="")
+                                .review__base
+                                    .review__rating
+                                        .rating
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                            span.rating__icon.icon.icon_star
+                                                svg.icon__item
+                                                    use(xlink:href="#icon_star")
+                                    .review__content.content
+                                        p Хочу выразить огромную благодарность врачу-эндокринологу амбулаторного отделения 2 ГДКБ Павлычевой Екатерине Святославовне! Сын состоит на учете с диагнозом субклинический гипотиреоз, АИТ?, задержка пубертата. Ведет нас другой доктор, но по причине ее отпуска попали на прием к Екатерине Святославовне. Очень деликатная, внимательная, тактичная. Мои сомнения и вопросы грамотно и спокойно аргументировала и разъясняла. Но самое главное - она нашла нужные слова, вселила в сына уверенность, что всё есть и будет хорошо (ведь понятно, какие страдания 14-летнему подростку доставляют мысли о том, что с его развитием что-то не так). Сын просто воспрял духом, поэтому я и пишу этот отзыв. Чтобы сказать, что врач - это не только профессионал, но и Человек! Екатерина Святославовна - врач на своем месте.
+
+                        +paginator('sm')
+                    .section.section_dark
+                        .box
+                            .section__caption.mb-big.text-center
+                                h2.heading Оставить свой отзыв
+                            form.form
+                                .flex.flex_form
+                                    .flex__cell
+                                        .form__row
+                                            label.form__label Название организации
+                                            .form__control
+                                                input.form__input(type="text")
+                                        .form__row
+                                            label.form__label Контактное лицо
+                                            .form__control
+                                                input.form__input(type="text")
+                                        .form__row.form__required
+                                            label.form__label Электронная почта (обязательно)
+                                            .form__control
+                                                input.form__input(type="email")
+                                                .form__error-message Необходимо указать адрес электронной почты
+                                        .form__row.form__required
+                                            label.form__label Номер телефона (обязательно)
+                                            .form__control
+                                                input.form__input(type="tel")
+                                                .form__error-message Необходимо ввести телефон
+                                    .flex__cell
+                                        .form__row
+                                            label.form__label Текст отзыва
+                                            .form__control
+                                                textarea.form__textarea(rows="11")
+                                        .form__row
+                                            label.form__label Ваша оценка
+                                            .form__control
+                                                .rating-btn
+                                                    .rating-btn__wrap
+                                                        - var number = 5;
+                                                        while number > 0
+                                                            - var count = number--
+                                                            input.rating-btn__input(id="rating-btn-" + count type="radio" name="rating" value=count)
+                                                            label.rating-btn__label(for="rating-btn-" + count)
+                                                                span.rating-btn__icon.icon.icon_star
+                                                                    svg.icon__item
+                                                                        use(xlink:href="#icon_star")
+
+                                .cover
+                                    .cover__side
+                                        button(type="submit").btn.btn_type_bright Добавить отзыв
+
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

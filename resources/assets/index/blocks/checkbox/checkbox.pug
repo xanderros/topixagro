@@ -1,0 +1,17 @@
+mixin checkbox(mod,name,...items)
+    .checkbox(class="checkbox_" + mod)
+        - var number = 1;
+        each item in items
+            - var count = number++
+            if item.more
+                .filter__more
+                    a.filter__link.filter__link_all.link.js-filter__item-toggle(href="#")
+                        span.link__text Еще
+                    a.filter__link.filter__link_collapse.link.js-filter__item-toggle(href="#")
+                        span.link__text Свернуть
+            else
+                .checkbox__item(class=item.hidden ? 'checkbox__item_hidden' : '')
+                    input.checkbox__input(type="checkbox" id=name + "_" + count)
+                    label.checkbox__label(type="checkbox" for=name + "_" + count)=item.title
+                        if item.count
+                            span.checkbox__counter=item.count

@@ -1,0 +1,13 @@
+mixin popup(name)
+    .popup(id="popup_" + name)
+        .popup__box
+            .popup__body
+                .popup__header
+                    .popup__title Обратный звонок
+                    a.js-popup__close.popup__close(href="#")
+                        span.popup__icon.icon.icon_close
+                            svg.icon__item
+                                use(xlink:href="#icon_close")
+                .popup__content
+                    if block
+                        block

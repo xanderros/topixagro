@@ -1,0 +1,32 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная')
+                        .top.top_nav
+                            h1.top__title.title Сертификаты и дипломы
+                            .top__nav
+                                +submenu('submenu_resp_mob','Все награды',{title: 'Все'},{title: 'Дипломы'},{title: 'Сертификаты'})
+                        .grid.grid_certificate.mb-xlarge
+                            - var number = 1;
+                            while number < 8
+                                - var count = number++
+                                .grid__cell
+                                    a.certificate(href="../assets/index/images/markup/certificate_" + count + ".jpg")
+                                        img.certificate__img(src="../assets/index/images/markup/certificate_" + count + ".jpg" alt="" width="280" height="382")
+                                        //img.certificate__img(src="holder.js/280x382?theme=topic&auto=true" alt="")
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

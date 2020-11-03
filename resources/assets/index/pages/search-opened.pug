@@ -1,0 +1,297 @@
+include ../blocks/includes/includes.pug
+
+doctype html
+html
+    +head
+    body.search-opened
+        +holder
+        div.svg-box
+            +svg-icons
+        .wrapper
+            .wrapper__inner
+                +header
+                main.container
+                    .box
+                        +breadcrumbs('Главная','Каталог')
+                        .top
+                            h1.top__title.title Системы увлажнения-охлаждения высокого давления
+                        +tags('Все разделы', {
+                            title: 'Системы увлажнения-охлаждения высокого давления',
+                            count: '32'
+                        },{
+                            title: 'Системы увлажнения',
+                            count: '17',
+                            submenu: [{
+                                title: 'Кормораздача',
+                                count: '11'
+                            }, {
+                                title: 'Поилки',
+                                count: '32'
+                            }, {
+                                title: 'Навозоудаление',
+                                count: '121'
+                            }, {
+                                title: 'Дополнительное',
+                                count: '3'
+                            }]
+                        },{
+                            title: 'Кормораздача',
+                            count: '15'
+                        },{
+                            title: 'Поилки',
+                            count: '34'
+                        },{
+                            title: 'Навозоудаление',
+                            count: '33'
+                        },{
+                            title: 'Дополнительное',
+                            count: '3'
+                        })
+                        .sort.sort_simple
+                            .sort__base
+                                .sort__select
+                                    .sort__item
+                                        .sort__title Сначала:
+                                        +select('','Новые','Популярные','Рейтинговые')
+                            .sort__side
+                                .sort__select
+                                    .sort__item
+                                        .sort__title На странице:
+                                        +select('5','10','20')
+                                .sort__view
+                                    .switcher
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-table" type="radio")
+                                            label.switcher__label(for="switcher-table")
+                                                span.switcher__icon.icon.icon_table
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_table")
+                                        .switcher__item
+                                            input.switcher__input(name="view" id="switcher-row" type="radio")
+                                            label.switcher__label(for="switcher-row")
+                                                span.switcher__icon.icon.icon_row
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_row")
+
+                        .sep.sep_top
+                            .sep__base
+                                .grid.grid_view_table
+                                    +product('', {
+                                        title: 'Газовый воздухонагреватель ERMAF P120 Газовый воздухонагреватель ERMAF P120 Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно',
+                                        parts: 'parts',
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                        imgSize: '200x100',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        notexist: 'Запросить цену',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см',
+                                        price: '5 250',
+                                        delivery: 'Доставка на 8 ноября',
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120 ',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        notexist: 'Запросить цену',
+                                        delivery: 'Доставка на 8 ноября',
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    },{
+                                        title: 'Газовый воздухонагреватель ERMAF P120',
+                                        imgSize: '240x150',
+                                        category1: 'Навозоудаление',
+                                        category2: 'Топик Агро',
+                                        code: 'Артикул: H50515010',
+                                        desc: '17 см × 20 см; Полиэтилен; В боксе 8400 шт.',
+                                        price: '68 188',
+                                        delivery: 'Доставка на 8 ноября',
+                                        exist: 'На складе достаточно'
+                                    })
+
+                            .sep__side
+                                .filter
+                                    .filter__container
+                                        .filter__cell
+                                            .filter__caption
+                                                .subtitle Производители
+                                            .filter__controls
+                                                +checkbox('filter', 'brand', {
+                                                    title: 'Газовый воздухонагреватель ERMAF P120',
+                                                    count: '2'
+                                                },{
+                                                    title: 'Biemmedue S.p.A.',
+                                                    count: '322'
+                                                },{
+                                                    title: 'Elster GmbH - Ermaf',
+                                                    count: '4'
+                                                },{
+                                                    title: 'Fancom BV',
+                                                    count: '43'
+                                                },{
+                                                    title: 'Gigola&Riccardi ',
+                                                    count: '1'
+                                                },{
+                                                    title: 'Ikadan',
+                                                    count: '23'
+                                                },{
+                                                    title: 'Kerbl GmbH',
+                                                    count: '2'
+                                                },{
+                                                    title: 'Lubing',
+                                                    count: '76'
+                                                },{
+                                                    title: 'Monoflo',
+                                                    count: '5'
+                                                },{
+                                                    title: 'Gigola&Riccardi',
+                                                    count: '34'
+                                                },{
+                                                    title: 'Ikadan',
+                                                    count: '17',
+                                                    hidden: 'hidden'
+                                                },{
+                                                    title: 'Kerbl GmbH',
+                                                    count: '10',
+                                                    hidden: 'hidden'
+                                                },{
+                                                    title: 'Lubing',
+                                                    count: '76',
+                                                    hidden: 'hidden'
+                                                },{
+                                                    more: 'more'
+                                                })
+                                        .filter__cell
+                                            .filter__caption
+                                                .subtitle Назначение
+                                            .filter__controls
+                                                +checkbox('filter', 'type', {
+                                                    title: 'Фермы КРС',
+                                                    count: '2'
+                                                },{
+                                                    title: 'Свиноводство',
+                                                    count: '322'
+                                                },{
+                                                    title: 'Птицеводство',
+                                                    count: '4'
+                                                })
+                                    .filter__actions
+                                        .filter__btn
+                                            a.btn.btn_type_bright.btn_size_wide(href="#") Подобрать
+                                        .filter__btn
+                                            a.ref.link(href="#")
+                                                span.ref__icon.icon.icon_reset
+                                                    svg.icon__item
+                                                        use(xlink:href="#icon_reset")
+                                                .ref__lit
+                                                    span.link__text Очистить
+
+                        +paginator('border')
+                        .layout.layout_big.mb-big
+                            .layout__side
+                                .layout__title Системы увлажнения-охлаждения высокого давления
+                            .layout__base.covering
+                                .content
+                                    p Группа Компаний «Топикс Агро» – занимается разработкой технологических решений, поставкой и монтажом оборудования для животноводства.
+                                    p Основные направления деятельности нашей компании – внедрение новейших инновационных технологий для ведения сельского хозяйства от ведущих мировых производителей. Кроме того, Топикс Агро стала компанией, производящей высококачественные, надежные товары и технические системы для молочного и зоотехнического оборудования.
+                                    p Специалисты нашего предприятия постоянно посещают международные выставки и проводят мониторинг новых достижений в производстве сельхозоборудования и ведения сельского хозяйства, выбирая своими партнерами и поставщиками только ведущих производителей.
+                                    p Стабильность, огромное количество товара на складе, квалифицированная техническая поддержка, наличие выездных бригад и гарантийного (сервисного) обслуживания – все это позволило нам привлечь и с каждым днем увеличивать число наших постоянных партнеров и клиентов.
+                                .covering__row
+                                    a.more.more_big(href="#")
+                                        span.more__text Подробнее
+                                        span.more__icon.icon.icon_arrow-right
+                                            svg.icon__item
+                                                use(xlink:href="#icon_arrow-right")
+                .overlay
+            +footer
+        +search-popup
+        script(src="../assets/index/js/main.js")
+        +browser-update

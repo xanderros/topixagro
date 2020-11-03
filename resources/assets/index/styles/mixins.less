@@ -1,0 +1,70 @@
+.font-face(@fontName,@weightName,@fontWeight) {
+	font-family: @fontName;
+	font-style: normal;
+	font-weight: @fontWeight;
+	src: local('☺'),
+	url('@{fontsPath}/@{fontName}/@{fontName}-@{weightName}.woff2') format('woff2'),
+	url('@{fontsPath}/@{fontName}/@{fontName}-@{weightName}.woff') format('woff'),
+	url('@{fontsPath}/@{fontName}/@{fontName}-@{weightName}.ttf') format('truetype');
+}
+.test {
+	background-color: rgba(20,40,50,.35);
+}
+.ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.hidden {
+	display: none;
+}
+.link(@linkColor,@linkColorHover,@linkBorderWidth,@linkBorderColor,@linkBorderColorHover) {
+	text-decoration: none;
+	color: @linkColor;
+	border-bottom: @linkBorderWidth solid @linkBorderColor;
+
+	&:hover {
+		color: @linkColorHover;
+		border-color: @linkBorderColorHover;
+	}
+}
+.linkText(@linkColor, @linkBorderColor) {
+	color: @linkColor;
+	border-bottom: 1px solid @linkBorderColor;
+}
+.linkTextHover(@linkColorHover, @linkBorderColorHover) {
+	color: @linkColorHover;
+	border-color: @linkBorderColorHover;
+}
+.arrow {
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		height: 2px;
+		width: 10px;
+		background-color: #71d130;
+		transition: transform 0.25s ease-in-out;
+	}
+	&:after {
+		transform: rotate(-30deg);
+	}
+	&:before {
+		transform: rotate(30deg);
+	}
+}
+.border(@gap) {
+	content: '';
+	position: absolute;
+	left: -@gap;
+	right: -@gap;
+
+	@media screen and (max-width: 1365px) {
+		left: 0;
+		right: 0;
+	}
+}
+.svg-shadow {
+	filter: drop-shadow(0 3px 4px rgba(95,172,42, 0.43));
+}
